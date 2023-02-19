@@ -3,6 +3,10 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-}
+  i18n: {
+    locales: ["en-US", "pl"],
+    defaultLocale: "pl",
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
