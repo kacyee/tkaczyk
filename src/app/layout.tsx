@@ -1,4 +1,5 @@
-import Link from "next/link";
+"useC";
+import Menu from "./components/Menu";
 import "./globals.css";
 
 export default function RootLayout({
@@ -14,22 +15,7 @@ export default function RootLayout({
       */}
       <head />
       <body className="h-screen max-h-screen w-full bg-black">
-        <header className="relative">
-          <div className="absolute flex h-screen w-full text-xl">
-            <Link
-              href="/portfolio"
-              className="ml-auto flex h-full w-[142px] items-center justify-center bg-white transition duration-500"
-            >
-              <span className="orientation-upright uppercase">Portfolio</span>
-            </Link>
-            <div className="flex h-full w-[142px] items-center justify-center bg-yellow">
-              <span className="orientation-upright uppercase">Uslugi</span>
-            </div>
-            <div className="flex h-full w-[142px] items-center justify-center bg-blue">
-              <span className="orientation-upright uppercase">Kontakt</span>
-            </div>
-          </div>
-        </header>
+        <Menu />
         {children}
       </body>
     </html>
