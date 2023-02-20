@@ -12,7 +12,7 @@ const Menu = () => {
           href="/"
           onClick={() => setActivePage("portfolio")}
           className={`h-full items-center justify-center bg-black text-white transition-all duration-1000 ${
-            activePage !== "/" ? "opacity-1 flex w-[142px]" : "w-full opacity-0"
+            activePage !== "/" ? "opacity-1 flex w-[142px]" : "opacity-0"
           }`}
         >
           <span className="orientation-upright uppercase">Strona główna</span>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Portfolio() {
   return (
-    <main className="bg-white h-screen">
+    <main className="h-screen">
       <Image
         src="/images/Logo-black.svg"
         width="67"
