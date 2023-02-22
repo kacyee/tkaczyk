@@ -51,6 +51,7 @@ const Menu = () => {
         </Link>
         <Link
           href={routes.CONTACT}
+          onClick={() => setActivePage(routes.CONTACT)}
           className={`flex h-full w-[142px] items-center justify-center bg-blue transition-all duration-1000
         ${activePage === routes.CONTACT ? "w-full" : ""}`}
         >
