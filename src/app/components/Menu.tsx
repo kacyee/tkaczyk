@@ -7,13 +7,12 @@ import { AppContext, AppContextState } from "../context/AppContext";
 
 const Menu = () => {
   const { activePage, setActivePage } = useContext<AppContextState>(AppContext);
-  console.log(activePage, routes.SERVICES);
+
   return (
     <header className="relative">
       <div className="absolute flex h-screen w-full text-xl">
         <Link
           href="/"
-          shallow={true}
           onClick={() => setActivePage("/")}
           className={`flex h-full items-center justify-center bg-black text-white transition-all duration-1000 ${
             activePage !== "/" ? "opacity-1 w-[142px]" : "w-0 opacity-0"
@@ -23,7 +22,6 @@ const Menu = () => {
         </Link>
         <Link
           href={routes.PORTFOLIO}
-          shallow={true}
           onClick={() => setActivePage(routes.PORTFOLIO)}
           className={`ml-auto flex h-full w-[142px] items-center justify-center bg-white transition-all duration-1000 ${
             activePage === routes.PORTFOLIO ? "w-full" : ""
@@ -39,7 +37,6 @@ const Menu = () => {
         </Link>
         <Link
           href={routes.SERVICES}
-          shallow={true}
           onClick={() => setActivePage(routes.SERVICES)}
           className={`flex h-full w-[142px] items-center justify-center bg-yellow transition-all duration-1000
         ${activePage === routes.SERVICES ? "w-full" : ""}`}
@@ -54,8 +51,6 @@ const Menu = () => {
         </Link>
         <Link
           href={routes.CONTACT}
-          shallow={true}
-          onClick={() => setActivePage(routes.CONTACT)}
           className={`flex h-full w-[142px] items-center justify-center bg-blue transition-all duration-1000
         ${activePage === routes.CONTACT ? "w-full" : ""}`}
         >
