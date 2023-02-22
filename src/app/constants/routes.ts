@@ -1,5 +1,5 @@
 export const routes = {
-  PORTFOLIO: "/portfolio",
-  SERVICES: "/uslugi",
-  CONTACT: "/kontakt",
+  PORTFOLIO: "portfolio",
+  SERVICES: "uslugi",
+  CONTACT: "kontakt",
 };
