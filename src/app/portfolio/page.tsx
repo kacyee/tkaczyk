@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Portfolio() {
+export default function Page() {
   return (
     <main className="h-screen">
       <Image
