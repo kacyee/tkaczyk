@@ -11,23 +11,19 @@ const Menu = () => {
   return (
     <header className="relative">
       <div className="absolute flex h-screen w-full text-xl">
-        <div
-          onClick={() => {
-            setActivePage("/");
-            history.replaceState(window.history.state, "", "/");
-          }}
-          className={`flex h-full cursor-pointer items-center justify-center bg-black text-white transition-all duration-1000 ${
+        <Link
+          href="/"
+          onClick={() => setActivePage("/")}
+          className={`flex h-full items-center justify-center bg-black text-white transition-all duration-1000 ${
             activePage !== "/" ? "opacity-1 w-[142px]" : "w-0 opacity-0"
           }`}
         >
           <span className="orientation-upright uppercase">Strona główna</span>
-        </div>
-        <div
-          onClick={() => {
-            setActivePage(routes.PORTFOLIO);
-            history.replaceState(window.history.state, "", routes.PORTFOLIO);
-          }}
-          className={`ml-auto flex h-full w-[142px] cursor-pointer items-center justify-center bg-white transition-all duration-1000 ${
+        </Link>
+        <Link
+          href={routes.PORTFOLIO}
+          onClick={() => setActivePage(routes.PORTFOLIO)}
+          className={`ml-auto flex h-full w-[142px] items-center justify-center bg-white transition-all duration-1000 ${
             activePage === routes.PORTFOLIO ? "w-full" : ""
           }`}
         >
@@ -38,13 +34,11 @@ const Menu = () => {
           >
             Portfolio
           </span>
-        </div>
-        <div
-          onClick={() => {
-            setActivePage(routes.SERVICES);
-            history.replaceState(window.history.state, "", routes.SERVICES);
-          }}
-          className={`cursor=pointer flex h-full w-[142px] items-center justify-center bg-yellow transition-all duration-1000
+        </Link>
+        <Link
+          href={routes.SERVICES}
+          onClick={() => setActivePage(routes.SERVICES)}
+          className={`flex h-full w-[142px] items-center justify-center bg-yellow transition-all duration-1000
         ${activePage === routes.SERVICES ? "w-full" : ""}`}
         >
           <span
@@ -54,13 +48,11 @@ const Menu = () => {
           >
             Uslugi
           </span>
-        </div>
-        <div
-          onClick={() => {
-            setActivePage(routes.CONTACT);
-            history.replaceState(window.history.state, "", routes.CONTACT);
-          }}
-          className={`flex h-full w-[142px] cursor-pointer items-center justify-center bg-blue transition-all duration-1000
+        </Link>
+        <Link
+          href={routes.CONTACT}
+          onClick={() => setActivePage(routes.CONTACT)}
+          className={`flex h-full w-[142px] items-center justify-center bg-blue transition-all duration-1000
         ${activePage === routes.CONTACT ? "w-full" : ""}`}
         >
           <span
@@ -70,7 +62,7 @@ const Menu = () => {
           >
             Kontakt
           </span>
-        </div>
+        </Link>
       </div>
     </header>
   );
