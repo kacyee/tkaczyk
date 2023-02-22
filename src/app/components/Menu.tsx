@@ -1,13 +1,23 @@
 "use client";
 
 import Link from "next/link";
-import { useContext } from "react";
+import { usePathname } from "next/navigation";
+import { useContext, useEffect } from "react";
 import { routes } from "../constants/routes";
 import { AppContext, AppContextState } from "../context/AppContext";
 
 const Menu = () => {
   const { activePage, setActivePage } = useContext<AppContextState>(AppContext);
+  const pathName = usePathname();
+  useEffect(() => {
+    if (pathName && activePage !== pathName.substring(1)) {
+      setActivePage(pathName!);
+    }
+  }, [pathName]);
 
+  useEffect(() => {
+    setActivePage(pathName?.substring(1)!);
+  });
   return (
     <header className="relative">
       <div className="absolute flex h-screen w-full text-xl">
