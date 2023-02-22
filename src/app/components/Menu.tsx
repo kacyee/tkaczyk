@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { routes } from "../constants/routes";
 import { AppContext, AppContextState } from "../context/AppContext";
 
 const Menu = () => {
-  const [activePage, setActivePage] = useState<string>("/");
+  const { activePage, setActivePage } = useContext<AppContextState>(AppContext);
 
   return (
     <header className="relative">
