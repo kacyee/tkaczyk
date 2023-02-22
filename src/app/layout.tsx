@@ -16,10 +16,8 @@ export default function RootLayout({
       */}
       <head />
       <body className="h-screen max-h-screen w-full bg-black">
-        <AppContextProvider>
-          <Menu />
-          {children}
-        </AppContextProvider>
+        <Menu />
+        {children}
       </body>
     </html>
   );
