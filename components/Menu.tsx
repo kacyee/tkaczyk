@@ -2,24 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import path from "path";
 import { useContext, useEffect } from "react";
-import { routes } from "../constants/routes";
-import { AppContext, AppContextState } from "../context/AppContext";
+import { routes } from "../app/constants/routes";
+import { AppContext, AppContextState } from "../app/context/AppContext";
 
 const Menu = () => {
   const { activePage, setActivePage } = useContext<AppContextState>(AppContext);
   const pathName = usePathname();
-  useEffect(() => {
-    if (pathName && activePage !== pathName.substring(1)) {
-      setActivePage(pathName!);
-    }
-  }, [pathName]);
-
-  useEffect(() => {
-    setActivePage(pathName?.substring(1)!);
-  });
+  console.log(activePage);
   return (
-    <header className="relative">
+    <header className="relative z-10">
       <div className="absolute flex h-screen w-full text-xl">
         <Link
           href="/"
@@ -33,8 +26,8 @@ const Menu = () => {
         <Link
           href={routes.PORTFOLIO}
           onClick={() => setActivePage(routes.PORTFOLIO)}
-          className={`ml-auto flex h-full w-[142px] items-center justify-center bg-white transition-all duration-1000 ${
-            activePage === routes.PORTFOLIO ? "w-full" : ""
+          className={`flex h-full items-center justify-center bg-white transition-all duration-1000 ${
+            activePage === routes.PORTFOLIO ? "w-full" : "ml-auto w-[142px]"
           }`}
         >
           <span
@@ -48,8 +41,8 @@ const Menu = () => {
         <Link
           href={routes.SERVICES}
           onClick={() => setActivePage(routes.SERVICES)}
-          className={`flex h-full w-[142px] items-center justify-center bg-yellow transition-all duration-1000
-        ${activePage === routes.SERVICES ? "w-full" : ""}`}
+          className={`flex h-full  items-center justify-center bg-yellow transition-all duration-1000
+        ${activePage === routes.SERVICES ? "w-full" : "w-[142px]"}`}
         >
           <span
             className={`orientation-upright uppercase transition-all duration-500 ${
@@ -62,8 +55,8 @@ const Menu = () => {
         <Link
           href={routes.CONTACT}
           onClick={() => setActivePage(routes.CONTACT)}
-          className={`flex h-full w-[142px] items-center justify-center bg-blue transition-all duration-1000
-        ${activePage === routes.CONTACT ? "w-full" : ""}`}
+          className={`flex h-full items-center justify-center bg-blue transition-all duration-1000
+        ${activePage === routes.CONTACT ? "w-full" : "w-[142px] "}`}
         >
           <span
             className={`orientation-upright uppercase transition-all duration-500 ${

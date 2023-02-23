@@ -1,4 +1,4 @@
-import Menu from "./components/Menu";
+import Menu from "../components/Menu";
 import { AppContextProvider } from "./context/AppContext";
 import "./globals.css";
 
