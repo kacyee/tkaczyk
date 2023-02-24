@@ -1,5 +1,6 @@
 "use client";
 
+import classNames from "classnames";
 import Link from "next/link";
 
 import { useContext } from "react";
@@ -15,18 +16,26 @@ const Menu = () => {
         <Link
           href="/"
           onClick={() => setActivePage("/")}
-          className={`flex h-full items-center justify-center bg-black text-white transition-all duration-1000 ${
-            activePage !== "/" ? "opacity-1 w-[142px]" : "w-0 opacity-0"
-          }`}
+          className={classNames(
+            `flex h-full items-center justify-center bg-black text-white transition-all duration-1000`,
+            {
+              "opacity-1 xl:w-24 2xl:w-[142px]": activePage !== "/",
+              "w-0 opacity-0": activePage === "/",
+            }
+          )}
         >
           <span className="orientation-upright uppercase">Strona główna</span>
         </Link>
         <Link
           href={routes.PORTFOLIO}
           onClick={() => setActivePage(routes.PORTFOLIO)}
-          className={`ml-auto flex h-full items-center justify-center bg-white transition-all duration-1000 ${
-            activePage === routes.PORTFOLIO ? "w-full" : " w-[142px]"
-          }`}
+          className={classNames(
+            `z-20 ml-auto flex h-full items-center justify-center bg-white transition-all duration-1000`,
+            {
+              "w-full": activePage === routes.PORTFOLIO,
+              "xl:w-24 2xl:w-[142px]": activePage !== routes.PORTFOLIO,
+            }
+          )}
         >
           <span
             className={`orientation-upright uppercase transition-all duration-500 ${
@@ -39,22 +48,32 @@ const Menu = () => {
         <Link
           href={routes.SERVICES}
           onClick={() => setActivePage(routes.SERVICES)}
-          className={`flex h-full  items-center justify-center bg-yellow transition-all duration-1000
-        ${activePage === routes.SERVICES ? "w-full" : "w-[142px]"}`}
+          className={classNames(
+            `flex h-full items-center justify-center bg-yellow transition-all duration-1000`,
+            {
+              "w-full": activePage === routes.SERVICES,
+              "xl:w-24 2xl:w-[142px]": activePage !== routes.SERVICES,
+            }
+          )}
         >
           <span
             className={`orientation-upright uppercase transition-all duration-500 ${
               activePage === routes.SERVICES ? "opacity-0" : ""
             }`}
           >
-            Uslugi
+            Usługi
           </span>
         </Link>
         <Link
           href={routes.CONTACT}
           onClick={() => setActivePage(routes.CONTACT)}
-          className={`flex h-full items-center justify-center bg-blue transition-all duration-1000
-        ${activePage === routes.CONTACT ? "w-full" : "w-[142px] "}`}
+          className={classNames(
+            `flex h-full items-center justify-center bg-blue transition-all duration-1000`,
+            {
+              "w-full": activePage === routes.CONTACT,
+              "xl:w-24 2xl:w-[142px]": activePage !== routes.CONTACT,
+            }
+          )}
         >
           <span
             className={`orientation-upright uppercase transition-all duration-500 ${
