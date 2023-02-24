@@ -1,6 +1,7 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { usePathname } from "next/navigation";
+import { createContext, useState } from "react";
 
 export const AppContext = createContext<AppContextState>({
   activePage: "",
@@ -17,7 +18,8 @@ export type AppContextState = {
 };
 
 export const AppContextProvider = ({ children }: AppContextProps) => {
-  const [activePage, setActivePage] = useState<string>("/");
+  const pathName = usePathname();
+  const [activePage, setActivePage] = useState<string>(pathName);
   return (
     <AppContext.Provider value={{ activePage, setActivePage }}>
       {children}

@@ -1,16 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import path from "path";
-import { useContext, useEffect } from "react";
+
+import { useContext } from "react";
 import { routes } from "../app/constants/routes";
 import { AppContext, AppContextState } from "../app/context/AppContext";
 
 const Menu = () => {
   const { activePage, setActivePage } = useContext<AppContextState>(AppContext);
-  const pathName = usePathname();
-  console.log(activePage);
+
   return (
     <header className="relative z-10">
       <div className="absolute flex h-screen w-full text-xl">
@@ -26,8 +24,8 @@ const Menu = () => {
         <Link
           href={routes.PORTFOLIO}
           onClick={() => setActivePage(routes.PORTFOLIO)}
-          className={`flex h-full items-center justify-center bg-white transition-all duration-1000 ${
-            activePage === routes.PORTFOLIO ? "w-full" : "ml-auto w-[142px]"
+          className={`ml-auto flex h-full items-center justify-center bg-white transition-all duration-1000 ${
+            activePage === routes.PORTFOLIO ? "w-full" : " w-[142px]"
           }`}
         >
           <span
