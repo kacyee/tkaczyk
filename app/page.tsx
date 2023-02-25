@@ -18,17 +18,17 @@ export default function Home() {
         WAVES({
           THREE,
           el: containerRef.current,
-          mouseControls: true,
-          touchControls: true,
+          mouseControls: false,
+          touchControls: false,
           gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
           color: 0x111111,
-          shininess: 18.0,
-          waveHeight: 16.0,
-          waveSpeed: 0.25,
+          shininess: 29.0,
+          waveHeight: 10.0,
+          waveSpeed: 0.32,
         })
       );
     }
