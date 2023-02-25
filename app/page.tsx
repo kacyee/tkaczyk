@@ -93,7 +93,9 @@ export default function Home() {
             <TypeIt
               options={{
                 afterComplete: (instance: any) => {
-                  return instance.destroy();
+                  setTitleFinished(true);
+                  if (instance) return instance.destroy();
+                  return;
                 },
               }}
               getBeforeInit={(instance) => {
