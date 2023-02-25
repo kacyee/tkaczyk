@@ -82,9 +82,9 @@ export default function Home() {
         <section
           id="mainText"
           className={classNames(
-            "flex h-full w-full flex-col  items-center justify-center opacity-100 transition duration-1000",
+            "flex h-full w-full flex-col  items-center justify-center  transition duration-1000",
             {
-              "opacity-0": showText,
+              hidden: showText,
             }
           )}
         >
