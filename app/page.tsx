@@ -1,14 +1,13 @@
 "use client";
 import classNames from "classnames";
 import Image from "next/image";
-import Link from "next/link";
 import { useContext, useEffect, useRef, useState } from "react";
 import { AppContext, AppContextState } from "./context/AppContext";
 // @ts-ignore
 import WAVES from "vanta/dist/vanta.waves.min";
 import * as THREE from "three";
 import Delayed from "@/components/Delayed";
-import TypeIt from "typeit-react";
+// import TypeIt from "typeit-react";
 export default function Home() {
   const { activePage } = useContext<AppContextState>(AppContext);
   const [vantaEffect, setVantaEffect] = useState<any>(null);
@@ -89,7 +88,7 @@ export default function Home() {
             }
           )}
         >
-          <h1 className="flex flex-col text-center text-[120px] leading-none tracking-tighter text-white lg:mt-[-130px]">
+          {/* <h1 className="flex flex-col text-center text-[120px] leading-none tracking-tighter text-white lg:mt-[-130px]">
             <TypeIt
               options={{
                 afterComplete: (instance: any) => {
@@ -131,7 +130,7 @@ export default function Home() {
                 }}
               />
             </p>
-          </h1>
+          </h1> */}
         </section>
         <section
           id="intro"
