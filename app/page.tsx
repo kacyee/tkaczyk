@@ -94,7 +94,11 @@ export default function Home() {
               options={{
                 afterComplete: (instance: any) => {
                   setTitleFinished(true);
-                  return;
+                  const element = document.getElementsByClassName(
+                    "ti-cursor"
+                  )?.[0] as HTMLElement;
+                  if (element) element.style.display = "none";
+                  return instance;
                 },
               }}
               getBeforeInit={(instance) => {
