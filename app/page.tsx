@@ -94,7 +94,6 @@ export default function Home() {
               options={{
                 afterComplete: (instance: any) => {
                   setTitleFinished(true);
-                  if (instance) return instance.destroy();
                   return;
                 },
               }}
