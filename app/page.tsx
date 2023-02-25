@@ -108,7 +108,7 @@ export default function Home() {
                   .delete(1)
                   .type("4")
                   .move(null, { to: "END" })
-                  .pause(200)
+                  .pause(500)
                   .go();
                 return instance;
               }}
@@ -121,8 +121,8 @@ export default function Home() {
             >
               <TypeIt
                 options={{
-                  startDelay: 4200,
-                  speed: 100,
+                  startDelay: 3900,
+                  speed: 50,
                 }}
                 getBeforeInit={(instance) => {
                   instance
