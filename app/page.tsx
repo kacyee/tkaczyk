@@ -1,6 +1,4 @@
 "use client";
-
-import Delayed from "@/components/Delayed";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +6,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { AppContext, AppContextState } from "./context/AppContext";
 // @ts-ignore
 import WAVES from "vanta/dist/vanta.waves.min";
-
+import * as THREE from "three";
 export default function Home() {
   const { activePage } = useContext<AppContextState>(AppContext);
   const [vantaEffect, setVantaEffect] = useState<any>(null);
@@ -18,6 +16,7 @@ export default function Home() {
     if (!vantaEffect) {
       setVantaEffect(
         WAVES({
+          THREE,
           el: containerRef.current,
           mouseControls: true,
           touchControls: true,
