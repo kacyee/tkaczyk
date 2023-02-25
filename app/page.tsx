@@ -4,13 +4,44 @@ import Delayed from "@/components/Delayed";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
-import { useContext } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AppContext, AppContextState } from "./context/AppContext";
+// @ts-ignore
+import WAVES from "vanta/dist/vanta.waves.min";
+
 export default function Home() {
   const { activePage } = useContext<AppContextState>(AppContext);
+  const [vantaEffect, setVantaEffect] = useState<any>(null);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(
+        WAVES({
+          el: containerRef.current,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color: 0x111111,
+          shininess: 18.0,
+          waveHeight: 16.0,
+          waveSpeed: 0.25,
+        })
+      );
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, [vantaEffect]);
+
   return (
-    <Delayed>
+    <>
       <main
+        ref={containerRef}
         className={classNames(
           `absolute z-10 h-screen opacity-0 transition-[opacity] duration-700 xl:w-[calc(100vw-270px)] xl:pl-5 xl:pr-16 xl:pt-8 2xl:w-[calc(100vw-426px)] 2xl:pl-[240px] 2xl:pt-[80px] 2xl:pr-24`,
           {
@@ -59,6 +90,6 @@ export default function Home() {
           </h2>
         </section>
       </main>
-    </Delayed>
+    </>
   );
 }
