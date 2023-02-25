@@ -90,6 +90,24 @@ export default function Home() {
           )}
         >
           <h1 className="flex flex-col text-center text-[120px] leading-none tracking-tighter text-white lg:mt-[-130px]">
+            <TypeIt
+              options={{
+                afterComplete: (instance: any) => {
+                  return instance.destroy();
+                },
+              }}
+              getBeforeInit={(instance) => {
+                instance
+                  .type("TKACZYK", { delay: 300 })
+                  .move(-4)
+                  .delete(1)
+                  .type("4")
+                  .move(null, { to: "END" })
+                  .pause(200)
+                  .go();
+                return instance;
+              }}
+            />
             <p
               className={classNames("text-[60px] tracking-normal text-yellow", {
                 block: titleFinished,
