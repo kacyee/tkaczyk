@@ -8,12 +8,12 @@ import { AppContext, AppContextState } from "./context/AppContext";
 import WAVES from "vanta/dist/vanta.waves.min";
 import * as THREE from "three";
 import Delayed from "@/components/Delayed";
-import Typewriter from "@/components/functional/Typewriter";
 import TypeIt from "typeit-react";
 export default function Home() {
   const { activePage } = useContext<AppContextState>(AppContext);
   const [vantaEffect, setVantaEffect] = useState<any>(null);
   const [isShown, setIsShown] = useState<boolean>(false);
+  const [titleFinished, setTitleFinished] = useState<boolean>(false);
   const [showText, setShowText] = useState<boolean>(false);
   const containerRef = useRef<HTMLElement>(null);
 
@@ -54,7 +54,7 @@ export default function Home() {
       <main
         ref={containerRef}
         className={classNames(
-          `absolute z-10 h-screen overflow-hidden opacity-0 transition-[opacity] duration-300 xl:w-[calc(100vw-18rem)] xl:pl-5 xl:pr-16 xl:pt-8 2xl:w-[calc(100vw-426px)] 2xl:pl-[240px] 2xl:pt-[80px] 2xl:pr-24`,
+          `absolute z-10 h-screen select-none overflow-hidden opacity-0 transition-[opacity] duration-300 xl:w-[calc(100vw-18rem)] xl:pl-5 xl:pr-16 xl:pt-8 2xl:w-[calc(100vw-426px)] 2xl:pl-[240px] 2xl:pt-[80px] 2xl:pr-24`,
           {
             "opacity-100": activePage === "/",
           }
@@ -89,9 +89,14 @@ export default function Home() {
             }
           )}
         >
-          <h1 className="text-[120px] tracking-tighter text-yellow lg:mt-[-130px]">
+          <h1 className="flex flex-col text-center text-[120px] leading-none tracking-tighter text-yellow lg:mt-[-130px]">
             <TypeIt
-              speed={100}
+              options={{
+                afterComplete: (instance: any) => {
+                  setTitleFinished(true);
+                  return instance.destroy();
+                },
+              }}
               getBeforeInit={(instance) => {
                 instance
                   .type("TKACZYK", { delay: 300 })
@@ -99,20 +104,41 @@ export default function Home() {
                   .delete(1)
                   .type("4")
                   .move(null, { to: "END" })
-                  .pause(300)
-                  .delete(7)
-                  .type("welcome to my site");
-
-                // Remember to return it!
+                  .pause(200)
+                  .go();
                 return instance;
               }}
             />
+            <p
+              className={classNames(
+                "text-[60px] tracking-normal text-[#b0b0b0]",
+                {
+                  block: titleFinished,
+                  hidden: !titleFinished,
+                }
+              )}
+            >
+              <TypeIt
+                options={{
+                  startDelay: 4200,
+                  speed: 100,
+                }}
+                getBeforeInit={(instance) => {
+                  instance
+                    .type("omfg!")
+                    .pause(300)
+                    .delete(5)
+                    .type("welcome to my site", { delay: 300 });
+                  return instance;
+                }}
+              />
+            </p>
           </h1>
         </section>
         <section
           id="intro"
           className={classNames(
-            "intro mt-18 text-2xl tracking-tight text-white opacity-0 transition duration-1000 xl:w-3/4 xl:pl-[110px] 2xl:pl-0",
+            "intro mt-18 text-2xl text-white opacity-0 transition duration-1000 xl:w-3/4 xl:pl-[110px] 2xl:pl-0",
             {
               "opacity-100": showText,
             }
