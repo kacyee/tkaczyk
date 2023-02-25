@@ -1,3 +1,5 @@
+import Script from "next/script";
+
 export default function Head() {
   return (
     <>
@@ -6,7 +8,7 @@ export default function Head() {
       <meta name="description" content="Paweł Tkaczyk - UX designer" />
       <link rel="icon" href="/favicon.ico" />
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+      <Script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></Script>
     </>
   );
 }
