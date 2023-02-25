@@ -112,7 +112,7 @@ export default function Home() {
         <section
           id="intro"
           className={classNames(
-            "intro mt-18 text-2xl text-white opacity-0 transition duration-1000 xl:w-3/4 xl:pl-[110px] 2xl:pl-0",
+            "intro mt-18 text-2xl tracking-tight text-white opacity-0 transition duration-1000 xl:w-3/4 xl:pl-[110px] 2xl:pl-0",
             {
               "opacity-100": showText,
             }
@@ -134,7 +134,7 @@ export default function Home() {
         <section
           id="big-heading"
           className={classNames(
-            "opacity-0 transition delay-700 duration-1000 xl:pl-[110px] 2xl:pl-0",
+            "tracking-tight opacity-0 transition delay-700 duration-1000 xl:pl-[110px] 2xl:pl-0",
             {
               "opacity-100": showText,
             }
