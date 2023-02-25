@@ -45,7 +45,7 @@ export default function Home() {
       );
     }
     return () => {
-      if (vantaEffect) vantaEffect.destroy();
+      if (vantaEffect && isShown) vantaEffect.destroy();
     };
   }, [vantaEffect, isShown]);
 
