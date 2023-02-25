@@ -125,7 +125,8 @@ export default function Home() {
                     .type("omfg!")
                     .pause(300)
                     .delete(5)
-                    .type("welcome to my site", { delay: 300 });
+                    .type("welcome to my site", { delay: 300 })
+                    .go();
                   return instance;
                 }}
               />
