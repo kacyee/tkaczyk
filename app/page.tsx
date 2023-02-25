@@ -9,6 +9,7 @@ import WAVES from "vanta/dist/vanta.waves.min";
 import * as THREE from "three";
 import Delayed from "@/components/Delayed";
 import Typewriter from "@/components/functional/Typewriter";
+import TypeIt from "typeit-react";
 export default function Home() {
   const { activePage } = useContext<AppContextState>(AppContext);
   const [vantaEffect, setVantaEffect] = useState<any>(null);
@@ -53,7 +54,7 @@ export default function Home() {
       <main
         ref={containerRef}
         className={classNames(
-          `absolute z-10 h-screen opacity-0 transition-[opacity] duration-300 xl:w-[calc(100vw-270px)] xl:pl-5 xl:pr-16 xl:pt-8 2xl:w-[calc(100vw-426px)] 2xl:pl-[240px] 2xl:pt-[80px] 2xl:pr-24`,
+          `absolute z-10 h-screen overflow-hidden opacity-0 transition-[opacity] duration-300 xl:w-[calc(100vw-18rem)] xl:pl-5 xl:pr-16 xl:pt-8 2xl:w-[calc(100vw-426px)] 2xl:pl-[240px] 2xl:pt-[80px] 2xl:pr-24`,
           {
             "opacity-100": activePage === "/",
           }
@@ -88,8 +89,25 @@ export default function Home() {
             }
           )}
         >
-          <Typewriter text="TK4CZYK" tag="p" />
-          <p className="text-[60px] text-[#b0b0b0]">welcome</p>
+          <h1 className="text-[120px] tracking-tighter text-yellow lg:mt-[-130px]">
+            <TypeIt
+              speed={100}
+              getBeforeInit={(instance) => {
+                instance
+                  .type("TKACZYK", { delay: 300 })
+                  .move(-4)
+                  .delete(1)
+                  .type("4")
+                  .move(null, { to: "END" })
+                  .pause(300)
+                  .delete(7)
+                  .type("welcome to my site");
+
+                // Remember to return it!
+                return instance;
+              }}
+            />
+          </h1>
         </section>
         <section
           id="intro"
