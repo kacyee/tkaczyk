@@ -8,6 +8,7 @@ import { AppContext, AppContextState } from "./context/AppContext";
 import WAVES from "vanta/dist/vanta.waves.min";
 import * as THREE from "three";
 import Delayed from "@/components/Delayed";
+import Typewriter from "@/components/functional/Typewriter";
 export default function Home() {
   const { activePage } = useContext<AppContextState>(AppContext);
   const [vantaEffect, setVantaEffect] = useState<any>(null);
@@ -38,7 +39,7 @@ export default function Home() {
           color: 0x90909,
           shininess: 0.0,
           waveHeight: 32.0,
-          zoom: 0.65,
+          zoom: 0.7,
         })
       );
     }
@@ -77,6 +78,18 @@ export default function Home() {
               <span>/ EN</span>
             </div>
           </div>
+        </section>
+        <section
+          id="mainText"
+          className={classNames(
+            "flex h-full w-full flex-col  items-center justify-center opacity-100 transition duration-1000",
+            {
+              "opacity-0": showText,
+            }
+          )}
+        >
+          <Typewriter text="TK4CZYK" tag="p" />
+          <p className="text-[60px] text-[#b0b0b0]">welcome</p>
         </section>
         <section
           id="intro"
