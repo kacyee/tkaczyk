@@ -89,7 +89,7 @@ export default function Home() {
             }
           )}
         >
-          <h1 className="flex flex-col text-center text-[120px] leading-none tracking-tighter text-yellow lg:mt-[-130px]">
+          <h1 className="flex flex-col text-center text-[120px] leading-none tracking-tighter text-white lg:mt-[-130px]">
             <TypeIt
               options={{
                 afterComplete: (instance: any) => {
@@ -110,13 +110,10 @@ export default function Home() {
               }}
             />
             <p
-              className={classNames(
-                "text-[60px] tracking-normal text-[#b0b0b0]",
-                {
-                  block: titleFinished,
-                  hidden: !titleFinished,
-                }
-              )}
+              className={classNames("text-[60px] tracking-normal text-yellow", {
+                block: titleFinished,
+                hidden: !titleFinished,
+              })}
             >
               <TypeIt
                 options={{
