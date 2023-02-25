@@ -30,7 +30,7 @@ const Menu = () => {
           href={routes.PORTFOLIO}
           onClick={() => setActivePage(routes.PORTFOLIO)}
           className={classNames(
-            `z-20 ml-auto flex h-full items-center justify-center bg-white transition-all duration-1000`,
+            `z-20 ml-auto flex h-full items-center justify-center bg-white transition-all duration-700`,
             {
               "w-full": activePage === routes.PORTFOLIO,
               "xl:w-24 2xl:w-[142px]": activePage !== routes.PORTFOLIO,
