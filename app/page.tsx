@@ -90,31 +90,28 @@ export default function Home() {
           )}
         >
           <h1 className="flex flex-col text-center text-[120px] leading-none tracking-tighter text-white lg:mt-[-130px]">
-            <TypeIt
-              options={{
-                afterComplete: (instance: any) => {
-                  setTitleFinished(true);
-                  return instance.destroy();
-                },
-              }}
-              getBeforeInit={(instance) => {
-                instance
-                  .type("TKACZYK", { delay: 300 })
-                  .move(-4)
-                  .delete(1)
-                  .type("4")
-                  .move(null, { to: "END" })
-                  .pause(200)
-                  .go();
-                return instance;
-              }}
-            />
             <p
               className={classNames("text-[60px] tracking-normal text-yellow", {
                 block: titleFinished,
                 hidden: !titleFinished,
               })}
-            ></p>
+            >
+              <TypeIt
+                options={{
+                  startDelay: 4200,
+                  speed: 100,
+                }}
+                getBeforeInit={(instance) => {
+                  instance
+                    .type("omfg!")
+                    .pause(300)
+                    .delete(5)
+                    .type("welcome to my site", { delay: 300 })
+                    .go();
+                  return instance;
+                }}
+              />
+            </p>
           </h1>
         </section>
         <section
