@@ -89,7 +89,7 @@ export default function Home() {
             }
           )}
         >
-          <h1 className="flex flex-col text-center text-[120px] leading-none tracking-tighter text-white lg:mt-[-130px]">
+          <h1 className="flex flex-col text-center text-[120px] leading-none text-white lg:mt-[-130px]">
             <TypeIt
               options={{
                 afterComplete: (instance: any) => {
