@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <main className="relative z-[11] h-screen  xl:ml-[196px] xl:mr-[162px]  2xl:mr-[232px]">
       <div className="flex h-full w-full">
-        <div className="flex h-full w-full w-[30%] flex-col justify-center  ">
+        <div className="flex h-full w-[30%] flex-col justify-center  ">
           <button
             className="py-2 pl-2 text-left text-lg font-medium uppercase hover:bg-black hover:text-white"
             onMouseOver={() => setHoveredItem("ux")}
