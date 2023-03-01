@@ -1,34 +1,56 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Page() {
   const [hoveredItem, setHoveredItem] = useState<string>("");
   return (
     <main className="relative z-[11] h-screen  xl:ml-[196px] xl:mr-[162px]  2xl:mr-[232px]">
       <div className="flex h-full w-full">
-        <div className="flex h-full w-[30%] flex-col justify-center  ">
-          <button
-            className="py-2 pl-2 text-left text-lg font-medium uppercase hover:bg-black hover:text-white"
-            onMouseOver={() => setHoveredItem("ux")}
-            onMouseLeave={() => setHoveredItem("")}
+        <div className="flex h-full w-[30%] flex-col justify-center">
+          <motion.nav
+            initial={{ translateX: -40, opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            transition={{ ease: "easeInOut", duration: 0.5, delay: 0.7 }}
+            className="flex w-full"
           >
-            UX/UI
-          </button>
-          <button
-            className="py-2 pl-2 text-left text-lg font-medium uppercase hover:bg-black hover:text-white"
-            onMouseOver={() => setHoveredItem("marketing")}
-            onMouseLeave={() => setHoveredItem("")}
+            <button
+              className="w-full py-2 pl-2 text-left text-lg font-medium uppercase transition duration-300 hover:bg-black hover:text-white"
+              onMouseOver={() => setHoveredItem("ux")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              UX/UI
+            </button>
+          </motion.nav>
+          <motion.nav
+            initial={{ translateX: -30, opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            transition={{ ease: "easeInOut", duration: 0.5, delay: 1 }}
+            className="flex w-full"
           >
-            Marketing
-          </button>
-          <button
-            className="py-2 pl-2 text-left text-lg font-medium uppercase hover:bg-black hover:text-white"
-            onMouseOver={() => setHoveredItem("another")}
-            onMouseLeave={() => setHoveredItem("")}
+            <button
+              className="w-full py-2 pl-2 text-left text-lg font-medium uppercase hover:bg-black hover:text-white"
+              onMouseOver={() => setHoveredItem("marketing")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              Marketing
+            </button>
+          </motion.nav>
+          <motion.nav
+            initial={{ translateX: -20, opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            transition={{ ease: "easeInOut", duration: 0.5, delay: 1.3 }}
+            className="flex w-full"
           >
-            INNE
-          </button>
+            <button
+              className="w-full py-2 pl-2 text-left text-lg font-medium uppercase hover:bg-black hover:text-white"
+              onMouseOver={() => setHoveredItem("another")}
+              onMouseLeave={() => setHoveredItem("")}
+            >
+              INNE
+            </button>
+          </motion.nav>
         </div>
         <div className="relative flex h-full w-[70%]">
           <Image
