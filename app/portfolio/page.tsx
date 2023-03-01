@@ -8,12 +8,20 @@ export default function Page() {
   return (
     <main className="relative z-[11] h-screen  xl:ml-[196px] xl:mr-[162px]  2xl:mr-[232px]">
       <div className="flex h-full w-full">
-        <div className="flex h-full w-[30%] flex-col justify-center">
+        <div className="flex h-full w-[40%] flex-col justify-center">
+          <motion.nav
+            initial={{ translateX: -40, opacity: 0 }}
+            animate={{ translateX: 0, opacity: 1 }}
+            transition={{ ease: "easeInOut", duration: 1, delay: 0.3 }}
+            className="xl:mb-[70px]"
+          >
+            <h1 className="text-[64px] font-bold xl:mb-[70px]">Portfolio</h1>
+          </motion.nav>
           <motion.nav
             initial={{ translateX: -40, opacity: 0 }}
             animate={{ translateX: 0, opacity: 1 }}
             transition={{ ease: "easeInOut", duration: 0.5, delay: 0.7 }}
-            className="flex w-full"
+            className="flex w-3/4"
           >
             <button
               className="w-full py-2 pl-2 text-left text-lg font-medium uppercase transition duration-300 hover:bg-black hover:text-white"
@@ -27,7 +35,7 @@ export default function Page() {
             initial={{ translateX: -30, opacity: 0 }}
             animate={{ translateX: 0, opacity: 1 }}
             transition={{ ease: "easeInOut", duration: 0.5, delay: 1 }}
-            className="flex w-full"
+            className="flex w-3/4"
           >
             <button
               className="w-full py-2 pl-2 text-left text-lg font-medium uppercase hover:bg-black hover:text-white"
@@ -41,7 +49,7 @@ export default function Page() {
             initial={{ translateX: -20, opacity: 0 }}
             animate={{ translateX: 0, opacity: 1 }}
             transition={{ ease: "easeInOut", duration: 0.5, delay: 1.3 }}
-            className="flex w-full"
+            className="flex w-3/4"
           >
             <button
               className="w-full py-2 pl-2 text-left text-lg font-medium uppercase hover:bg-black hover:text-white"
@@ -52,7 +60,7 @@ export default function Page() {
             </button>
           </motion.nav>
         </div>
-        <div className="relative flex h-full w-[70%]">
+        <div className="relative flex h-full w-[60%]">
           <Image
             fill
             alt="image"
