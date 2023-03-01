@@ -13,7 +13,7 @@ const PageTitle = ({ text, extraWrapperClass }: PageTitleProps) => {
       transition={{ ease: "easeInOut", duration: 1, delay: 0.3 }}
       className={`absolute lg:top-[172px] 2xl:top-[237px] ${extraWrapperClass}`}
     >
-      <h1 className="text-[64px] font-bold xl:mb-[70px]">{text}</h1>
+      <h1 className="text-[64px] font-bold ">{text}</h1>
     </motion.nav>
   );
 };
