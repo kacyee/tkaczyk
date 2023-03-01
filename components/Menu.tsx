@@ -2,10 +2,11 @@
 
 import classNames from "classnames";
 import Link from "next/link";
-
+import Image from "next/image";
 import { useContext } from "react";
 import { routes } from "../app/constants/routes";
 import { AppContext, AppContextState } from "../app/context/AppContext";
+import { motion } from "framer-motion";
 
 const Menu = () => {
   const { activePage, setActivePage } = useContext<AppContextState>(AppContext);
@@ -24,6 +25,14 @@ const Menu = () => {
             }
           )}
         >
+          <motion.nav
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "anticipate", duration: 0.5, delay: 0.7 }}
+            className="absolute top-[36px] mx-auto"
+          >
+            <Image src="/images/logo.svg" width="67" height="51" alt="logo" />
+          </motion.nav>
           <span className="orientation-upright uppercase">Strona główna</span>
         </Link>
         <Link

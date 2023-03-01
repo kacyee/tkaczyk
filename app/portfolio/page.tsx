@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import PageTitle from "@/components/PageTitle";
 
 export default function Page() {
   const [hoveredItem, setHoveredItem] = useState<string>("");
@@ -9,14 +10,7 @@ export default function Page() {
     <main className="relative z-[11] h-screen  xl:ml-[196px] xl:mr-[162px]  2xl:mr-[232px]">
       <div className="flex h-full w-full">
         <div className="flex h-full w-[40%] flex-col justify-center">
-          <motion.nav
-            initial={{ translateX: -40, opacity: 0 }}
-            animate={{ translateX: 0, opacity: 1 }}
-            transition={{ ease: "easeInOut", duration: 1, delay: 0.3 }}
-            className="xl:mb-[70px]"
-          >
-            <h1 className="text-[64px] font-bold xl:mb-[70px]">Portfolio</h1>
-          </motion.nav>
+          <PageTitle extraWrapperClass="uppercase" text="Portfolio" />
           <motion.nav
             initial={{ translateX: -40, opacity: 0 }}
             animate={{ translateX: 0, opacity: 1 }}
