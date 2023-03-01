@@ -30,7 +30,7 @@ export default function Page() {
             INNE
           </button>
         </div>
-        <div className="relative flex h-full w-[70%] w-full">
+        <div className="relative flex h-full w-[70%]">
           <Image
             fill
             alt="image"
