@@ -47,3 +47,45 @@
 body {
   font-family: "Urwdin", "sans-serif";
 }
+
+li .splide__pagination__page {
+  border: 1px solid #0b0b0b;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 9999999px;
+  margin: 0 2rem;
+  background: #fff;
+}
+li .splide__pagination__page.is-active {
+  background: #0b0b0b;
+}
+.splide__arrows {
+  display: inline-flex;
+  width: 30%;
+  order: 2;
+}
+.splide:not(.is-overflow) .splide__pagination {
+  display: inline-flex;
+  order: 1;
+}
+.splide__arrow--next,
+.splide__arrow--prev {
+  transition: 0.1s ease-in-out;
+  opacity: 1;
+  width: 26px;
+}
+.splide__arrow--prev:disabled,
+.splide__arrow--prev[disabled],
+.splide__arrow--next:disabled,
+.splide__arrow--next[disabled],
+.splide__arrow--prev[disabled] {
+  opacity: 0;
+}
+
+.servicesList {
+  list-style: disc;
+  margin-left: 1rem;
+}
+.servicesList li {
+  margin-bottom: 1rem;
+}

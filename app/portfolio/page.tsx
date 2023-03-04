@@ -7,10 +7,14 @@ import PageTitle from "@/components/PageTitle";
 export default function Page() {
   const [hoveredItem, setHoveredItem] = useState<string>("");
   return (
-    <main className="relative z-[11] h-screen  xl:ml-[196px] xl:mr-[162px]  2xl:mr-[232px]">
+    <main className="relative z-[11] h-screen xl:ml-[196px] xl:mr-[162px]  2xl:mr-[232px]">
       <div className="flex h-full w-full">
         <div className="flex h-full w-[40%] flex-col justify-center">
-          <PageTitle extraWrapperClass="uppercase" text="Portfolio" />
+          <PageTitle
+            extraWrapperClass="uppercase"
+            text="Portfolio"
+            absolute="true"
+          />
           <motion.nav
             initial={{ translateX: -40, opacity: 0 }}
             animate={{ translateX: 0, opacity: 1 }}
