@@ -2,6 +2,7 @@
 import PageTitle from "@/components/PageTitle";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide-core.min.css";
+import classNames from "classnames";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -9,12 +10,14 @@ import { useEffect, useRef, useState } from "react";
 export default function Services() {
   const splideRef = useRef<Splide>(null);
   const detailsRef = useRef<Splide>(null);
+  const [activeSlideIndex, setActiveSlideIndex] = useState<number>(0);
 
   useEffect(() => {
     if (splideRef.current && detailsRef.current && detailsRef.current.splide) {
       splideRef.current.sync(detailsRef.current.splide);
     }
   }, []);
+
   return (
     <main className="relative z-[11] h-screen overflow-hidden xl:ml-[450px]  xl:mr-[162px] 2xl:mr-[232px]">
       <div className="flex h-full w-full justify-between">
@@ -22,13 +25,14 @@ export default function Services() {
           <motion.div
             initial={{ translateX: -40, opacity: 0 }}
             animate={{ translateX: 0, opacity: 1 }}
-            transition={{ ease: "easeInOut", duration: 0.4 }}
+            transition={{ ease: "easeInOut", duration: 0.4, delay: 0.7 }}
           >
             <PageTitle extraWrapperClass="mb-8 uppercase" text="Usługi" />
             <Splide
               ref={splideRef}
               hasTrack={false}
               options={{ pagination: true, speed: 1000 }}
+              onMove={(e) => setActiveSlideIndex(e.index)}
             >
               <SplideTrack>
                 <SplideSlide>
@@ -105,23 +109,41 @@ export default function Services() {
               </SplideSlide>
               <SplideSlide>
                 <h2 className="text-[64px] font-bold uppercase">Mobile</h2>
-                <ul className="servicesList mt-20 text-lg">
-                  <li>Aplikacje web</li>
-                  <li>Strony www</li>
-                  <li>Landing page</li>
-                  <li>Sklepy internetowe</li>
+                <ul className="servicesList mt-20 text-lg uppercase">
+                  <li>Aplikacje ANDROID</li>
+                  <li>Aplikacje iOS</li>
                 </ul>
               </SplideSlide>
               <SplideSlide>
                 <h2 className="text-[64px] font-bold uppercase">Inne</h2>
                 <ul className="servicesList mt-20 text-lg">
-                  <li>Aplikacje web</li>
-                  <li>Strony www</li>
-                  <li>Landing page</li>
-                  <li>Sklepy internetowe</li>
+                  <li>Design marki</li>
+                  <li>Design produktów</li>
+                  <li>A-Z branding</li>
+                  <li>materiały reklamowe</li>
+                  <li>DTP</li>
                 </ul>
               </SplideSlide>
             </Splide>
+
+            <div className="">
+              <div
+                className={classNames(
+                  "border border-black transition-all duration-500",
+                  {
+                    "h-[122px] w-[254px]":
+                      activeSlideIndex === 0 || activeSlideIndex === 2,
+                    "h-[232px] w-[132px]": activeSlideIndex === 1,
+                  }
+                )}
+              >
+                <p className="flex h-full w-full items-center justify-center">
+                  {activeSlideIndex === 0 && "1920 : 1080"}
+                  {activeSlideIndex === 1 && "375 : 812"}
+                  {activeSlideIndex === 2 && "X : Y"}
+                </p>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
