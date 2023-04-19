@@ -1,0 +1,70 @@
+{
+  "useCases": [
+    {
+      "name": "UX/UI",
+      "image": "/images/ux-background.png",
+      "cases": [
+        {
+          "name": "Connect-Trans",
+          "url": "/images/usecases/MoneviaCS_1440.png"
+        },
+        {
+          "name": "Aplikacja Diagnostów laboratoryjnych",
+          "url": "/images/usecases/MoneviaCS_1440.png"
+        },
+        {
+          "name": "Picdone",
+          "url": "/images/usecases/MoneviaCS_1440.png"
+        },
+        {
+          "name": "UFG",
+          "url": "/images/usecases/MoneviaCS_1440.png"
+        }
+      ]
+    },
+    {
+      "name": "Marketing",
+      "image": "/images/jar.jpg",
+      "cases": [
+        {
+          "name": "Connect-Trans",
+          "url": "/images/usecases/MoneviaCS_1440.png"
+        },
+        {
+          "name": "Aplikacja Diagnostów laboratoryjnych",
+          "url": "/images/usecases/MoneviaCS_1440.png"
+        },
+        {
+          "name": "Picdone",
+          "url": "/images/usecases/MoneviaCS_1440.png"
+        },
+        {
+          "name": "UFG",
+          "url": "/images/usecases/MoneviaCS_1440.png"
+        }
+      ]
+    },
+    {
+      "name": "Inne",
+      "image": "/images/paluch.jpg",
+      "cases": [
+        {
+          "name": "Connect-Trans",
+          "url": "/images/usecases/MoneviaCS_1440.png"
+        },
+        {
+          "name": "Aplikacja Diagnostów laboratoryjnych",
+          "url": "/images/usecases/MoneviaCS_1440.png"
+        },
+        {
+          "name": "Picdone",
+          "url": "/images/usecases/MoneviaCS_1440.png"
+        },
+        {
+          "name": "UFG",
+          "url": "/images/usecases/MoneviaCS_1440.png"
+        }
+      ]
+    }
+  ]
+}
