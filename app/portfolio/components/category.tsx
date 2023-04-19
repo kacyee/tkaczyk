@@ -76,6 +76,7 @@ export const Category = ({
               height={activeHeight}
               quality={100}
               className="h-max w-full overflow-y-auto"
+              unoptimized={true}
             />
           ) : null}
         </div>
