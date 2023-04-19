@@ -16,11 +16,13 @@ export const Category = ({
   const [activeCase, setActiveCase] = useState<singleCase | null>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const [activeHeight, setActiveHeight] = useState<number>(0);
+  const [activeWidth, setActiveWidth] = useState<number>(0);
 
   const calculateHeight = () => {
     setTimeout(() => {
       if (imageRef.current && imageRef.current.naturalHeight) {
         setActiveHeight(imageRef.current.naturalHeight);
+        setActiveWidth(imageRef.current.naturalWidth);
       }
     }, 500);
   };
@@ -72,11 +74,12 @@ export const Category = ({
               alt={activeCase.name}
               id={activeCase.name}
               ref={imageRef}
-              width={744}
+              width={activeWidth}
               height={activeHeight}
               quality={100}
               className="h-max w-full overflow-y-auto"
               unoptimized={true}
+              loading={"eager"}
             />
           ) : null}
         </div>
