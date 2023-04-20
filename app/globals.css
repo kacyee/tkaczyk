@@ -89,3 +89,17 @@ li .splide__pagination__page.is-active {
 .servicesList li {
   margin-bottom: 1rem;
 }
+
+#useCaseWrapper::-webkit-scrollbar {
+  width: 0.75em;
+}
+
+#useCaseWrapper::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#useCaseWrapper::-webkit-scrollbar-thumb {
+  background-color: #0b0b0b;
+  border-radius: 6px;
+  outline: 1px solid #0b0b0b;
+}

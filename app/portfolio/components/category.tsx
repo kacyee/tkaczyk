@@ -35,39 +35,44 @@ export const Category = ({
             text={activeCategory.name}
             absolute="true"
           />
-          {activeCategory.cases
-            ? activeCategory.cases.map((item, index) => (
-                <motion.nav
-                  initial={{ translateX: -40, opacity: 0 }}
-                  animate={{ translateX: 0, opacity: 1 }}
-                  key={`${item.name} - ${index}`}
-                  transition={{
-                    ease: "easeInOut",
-                    duration: 0.5,
-                    delay: (index + 1) * 0.2,
-                  }}
-                  className="flex w-3/4"
-                >
-                  <button
-                    className="w-full py-2 pl-2 text-left text-lg font-medium uppercase transition duration-300 hover:bg-black hover:text-white"
-                    onClick={() => {
-                      setActiveCase(item);
-                      calculateHeight();
+          <div className="lg:pt-36 xxl:pt-0">
+            {activeCategory.cases
+              ? activeCategory.cases.map((item, index) => (
+                  <motion.nav
+                    initial={{ translateX: -40, opacity: 0 }}
+                    animate={{ translateX: 0, opacity: 1 }}
+                    key={`${item.name} - ${index}`}
+                    transition={{
+                      ease: "easeInOut",
+                      duration: 0.5,
+                      delay: (index + 1) * 0.2,
                     }}
+                    className="flex lg:w-11/12 xxl:w-3/4"
                   >
-                    {item.name}
-                  </button>
-                </motion.nav>
-              ))
-            : null}
-          <button
-            className="mt-8 self-start bg-black px-4 py-2 text-white"
-            onClick={() => setActiveCategory(null)}
-          >
-            Wróć
-          </button>
+                    <button
+                      className="w-full py-2 pl-2 text-left text-lg font-medium uppercase transition duration-300 hover:bg-black hover:text-white"
+                      onClick={() => {
+                        setActiveCase(item);
+                        calculateHeight();
+                      }}
+                    >
+                      {item.name}
+                    </button>
+                  </motion.nav>
+                ))
+              : null}
+            <button
+              className="mt-8 self-start border border-black bg-black px-4 py-2 text-white transition duration-300 hover:bg-transparent hover:text-black"
+              onClick={() => setActiveCategory(null)}
+            >
+              Wróć
+            </button>
+          </div>
         </div>
-        <div className="relative flex h-full w-[60%] overflow-y-auto">
+        <div
+          id="useCaseWrapper"
+          className="relative flex h-full w-[60%] overflow-y-auto"
+        >
           {activeCase ? (
             <Image
               src={activeCase.url}
@@ -79,7 +84,6 @@ export const Category = ({
               quality={100}
               className="h-max w-full overflow-y-auto"
               unoptimized={true}
-              loading={"eager"}
             />
           ) : null}
         </div>
