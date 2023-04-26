@@ -1,6 +1,8 @@
 export type singleCase = {
   name: string;
   url: string;
+  hoverBgColor: string;
+  hoverFontColor: string;
 };
 
 export type UseCase = {

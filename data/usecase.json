@@ -6,19 +6,27 @@
       "cases": [
         {
           "name": "Connect-Trans",
-          "url": "/images/usecases/MoneviaCS_1440_2x.png"
+          "url": "/images/usecases/MoneviaCS_1440_2x.png",
+          "hoverBgColor": "#ED1A3B",
+          "hoverFontColor": "#FFF"
         },
         {
           "name": "Aplikacja Diagnostów laboratoryjnych",
-          "url": "/images/usecases/MoneviaCS_1440_2x.png"
+          "url": "/images/usecases/MoneviaCS_1440_2x.png",
+          "hoverBgColor": "#D3D3D3",
+          "hoverFontColor": "#FFF"
         },
         {
           "name": "Picdone",
-          "url": "/images/usecases/MoneviaCS_1440_2x.png"
+          "url": "/images/usecases/MoneviaCS_1440_2x.png",
+          "hoverBgColor": "#D3D3D3",
+          "hoverFontColor": "#FFF"
         },
         {
           "name": "UFG",
-          "url": "/images/usecases/MoneviaCS_1440_2x.png"
+          "url": "/images/usecases/MoneviaCS_1440_2x.png",
+          "hoverBgColor": "#000",
+          "hoverFontColor": "#FFF"
         }
       ]
     },
@@ -28,19 +36,27 @@
       "cases": [
         {
           "name": "Connect-Trans",
-          "url": "/images/usecases/MoneviaCS_1440_2x.png"
+          "url": "/images/usecases/MoneviaCS_1440_2x.png",
+          "hoverBgColor": "#000",
+          "hoverFontColor": "#FFF"
         },
         {
           "name": "Aplikacja Diagnostów laboratoryjnych",
-          "url": "/images/usecases/MoneviaCS_1440_2x.png"
+          "url": "/images/usecases/MoneviaCS_1440_2x.png",
+          "hoverBgColor": "#000",
+          "hoverFontColor": "#FFF"
         },
         {
           "name": "Picdone",
-          "url": "/images/usecases/MoneviaCS_1440_2x.png"
+          "url": "/images/usecases/MoneviaCS_1440_2x.png",
+          "hoverBgColor": "#000",
+          "hoverFontColor": "#FFF"
         },
         {
           "name": "UFG",
-          "url": "/images/usecases/MoneviaCS_1440_2x.png"
+          "url": "/images/usecases/MoneviaCS_1440_2x.png",
+          "hoverBgColor": "#000",
+          "hoverFontColor": "#FFF"
         }
       ]
     },
@@ -50,19 +66,27 @@
       "cases": [
         {
           "name": "Connect-Trans",
-          "url": "/images/usecases/MoneviaCS_1440_2x.png"
+          "url": "/images/usecases/MoneviaCS_1440_2x.png",
+          "hoverBgColor": "#000",
+          "hoverFontColor": "#FFF"
         },
         {
           "name": "Aplikacja Diagnostów laboratoryjnych",
-          "url": "/images/usecases/MoneviaCS_1440_2x.png"
+          "url": "/images/usecases/MoneviaCS_1440_2x.png",
+          "hoverBgColor": "#000",
+          "hoverFontColor": "#FFF"
         },
         {
           "name": "Picdone",
-          "url": "/images/usecases/MoneviaCS_1440_2x.png"
+          "url": "/images/usecases/MoneviaCS_1440_2x.png",
+          "hoverBgColor": "#000",
+          "hoverFontColor": "#FFF"
         },
         {
           "name": "UFG",
-          "url": "/images/usecases/MoneviaCS_1440_2x.png"
+          "url": "/images/usecases/MoneviaCS_1440_2x.png",
+          "hoverBgColor": "#000",
+          "hoverFontColor": "#FFF"
         }
       ]
     }

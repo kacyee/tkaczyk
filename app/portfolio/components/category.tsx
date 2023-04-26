@@ -47,16 +47,34 @@ export const Category = ({
                       duration: 0.5,
                       delay: (index + 1) * 0.2,
                     }}
-                    className="flex lg:w-11/12 xxl:w-3/4"
+                    className="flex lg:w-full"
                   >
                     <button
-                      className="w-full py-2 pl-2 text-left text-lg font-medium uppercase transition duration-300 hover:bg-black hover:text-white"
+                      className="relative w-full py-2 pl-2 text-left  text-lg font-medium uppercase transition duration-300 "
                       onClick={() => {
                         setActiveCase(item);
                         calculateHeight();
                       }}
                     >
-                      {item.name}
+                      <div
+                        className={`absolute top-0 left-0 h-full w-full transition duration-300 ${
+                          activeCase?.name !== item.name ? "hidden" : ""
+                        }`}
+                        style={{
+                          background: item.hoverBgColor,
+                        }}
+                      ></div>
+                      <span
+                        className="relative z-10 flex h-full items-center"
+                        style={{
+                          color:
+                            activeCase?.name === item.name
+                              ? item.hoverFontColor
+                              : "#000",
+                        }}
+                      >
+                        {item.name}
+                      </span>
                     </button>
                   </motion.nav>
                 ))

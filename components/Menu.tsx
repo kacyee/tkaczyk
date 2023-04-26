@@ -12,7 +12,7 @@ const Menu = () => {
   const { activePage, setActivePage } = useContext<AppContextState>(AppContext);
 
   return (
-    <header className="relative z-10">
+    <header className="relative z-10 hidden lg:block">
       <div className="absolute flex h-screen w-full text-xl">
         <Link
           href="/"

@@ -1,3 +1,4 @@
+import MobileMenu from "@/components/MobileMenu";
 import Menu from "../components/Menu";
 import { AppContextProvider } from "./context/AppContext";
 import "./globals.css";
@@ -14,7 +15,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="h-screen max-h-screen w-full bg-black">
+      <body className="relative h-screen max-h-screen w-full bg-black">
         <AppContextProvider>
           <Menu />
           {children}
