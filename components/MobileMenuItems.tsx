@@ -16,9 +16,12 @@ const MobileMenuItems = ({
   return (
     <>
       <div
-        className={classNames("absolute z-[1000] flex h-full w-full flex-col", {
-          hidden: !isMobileMenuActive,
-        })}
+        className={classNames(
+          "absolute z-[1000] flex h-full max-h-screen w-full flex-col",
+          {
+            hidden: !isMobileMenuActive,
+          }
+        )}
       >
         <motion.nav
           initial={{ translateX: -40, opacity: 0 }}
