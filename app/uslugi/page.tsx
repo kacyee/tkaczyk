@@ -152,7 +152,8 @@ export default function Services() {
                     {
                       "h-[122px] w-[254px]":
                         activeSlideIndex === 0 || activeSlideIndex === 2,
-                      "h-[232px] w-[132px]": activeSlideIndex === 1,
+                      "mt-[-100px] h-[232px] w-[132px] lg:mt-0":
+                        activeSlideIndex === 1,
                     }
                   )}
                 >
