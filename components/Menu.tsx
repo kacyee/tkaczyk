@@ -20,7 +20,7 @@ const Menu = () => {
           className={classNames(
             `flex h-full items-center justify-center bg-black text-white transition-all duration-1000`,
             {
-              "opacity-1 xl:w-24 2xl:w-[142px]": activePage !== "/",
+              "opacity-1 lg:w-24 2xl:w-[142px]": activePage !== "/",
               "w-0 opacity-0": activePage === "/",
             }
           )}

@@ -27,58 +27,71 @@ export const Category = ({
     }, 500);
   };
   return (
-    <main className="relative z-[11] h-[calc(100dvh)] xl:ml-[196px] xl:mr-[162px]  2xl:mr-[232px]">
-      <div className="flex h-full w-full">
-        <div className="flex h-full w-[40%] flex-col justify-center">
+    <main className="relative z-[11] h-[calc(100dvh)] bg-white pt-[90px] lg:ml-[142px] lg:bg-transparent lg:pt-0  xl:ml-[196px] xl:mr-[162px] 2xl:mr-[232px]">
+      <div className="flex h-full w-full flex-col lg:flex-row">
+        <div className="flex h-full flex-col lg:w-[40%] lg:justify-center">
           <PageTitle
             extraWrapperClass="uppercase"
             text={activeCategory.name}
             absolute="true"
           />
           <div className="lg:pt-36 xxl:pt-0">
-            {activeCategory.cases
-              ? activeCategory.cases.map((item, index) => (
-                  <motion.nav
-                    initial={{ translateX: -40, opacity: 0 }}
-                    animate={{ translateX: 0, opacity: 1 }}
-                    key={`${item.name} - ${index}`}
-                    transition={{
-                      ease: "easeInOut",
-                      duration: 0.5,
-                      delay: (index + 1) * 0.2,
-                    }}
-                    className="flex lg:w-full"
-                  >
-                    <button
-                      className="relative w-full py-2 pl-2 text-left  text-lg font-medium uppercase transition duration-300 "
-                      onClick={() => {
-                        setActiveCase(item);
-                        calculateHeight();
+            <div className="scrollbar-hide ml-8 flex overflow-y-auto lg:ml-0 lg:block">
+              {activeCategory.cases
+                ? activeCategory.cases.map((item, index) => (
+                    <motion.nav
+                      initial={{ translateX: -40, opacity: 0 }}
+                      animate={{ translateX: 0, opacity: 1 }}
+                      key={`${item.name} - ${index}`}
+                      transition={{
+                        ease: "easeInOut",
+                        duration: 0.5,
+                        delay: (index + 1) * 0.2,
                       }}
+                      className="mr-4 flex bg-black lg:mr-0 lg:w-full lg:bg-transparent "
                     >
-                      <div
-                        className={`absolute top-0 left-0 h-full w-full transition duration-300 ${
-                          activeCase?.name !== item.name ? "hidden" : ""
-                        }`}
-                        style={{
-                          background: item.hoverBgColor,
-                        }}
-                      ></div>
-                      <span
-                        className="relative z-10 flex h-full items-center"
-                        style={{
-                          color:
-                            activeCase?.name === item.name
-                              ? item.hoverFontColor
-                              : "#000",
+                      <button
+                        className="relative w-full py-2 pl-2 text-left  text-lg font-medium uppercase transition duration-300 "
+                        onClick={() => {
+                          setActiveCase(item);
+                          calculateHeight();
                         }}
                       >
-                        {item.name}
-                      </span>
-                    </button>
-                  </motion.nav>
-                ))
-              : null}
+                        <div
+                          className={`absolute top-0 left-0 h-full w-full transition duration-300 ${
+                            activeCase?.name !== item.name ? "hidden" : ""
+                          }`}
+                          style={{
+                            background: item.hoverBgColor,
+                          }}
+                        ></div>
+                        <span
+                          className="relative z-10 flex hidden h-full items-center lg:block"
+                          style={{
+                            color:
+                              activeCase?.name === item.name
+                                ? item.hoverFontColor
+                                : "#000",
+                          }}
+                        >
+                          {item.name}
+                        </span>
+                        <span
+                          className="relative z-10 flex h-full  items-center whitespace-nowrap py-2 px-2 text-white lg:hidden"
+                          style={{
+                            color:
+                              activeCase?.name === item.name
+                                ? item.hoverFontColor
+                                : "#fff",
+                          }}
+                        >
+                          {item.name}
+                        </span>
+                      </button>
+                    </motion.nav>
+                  ))
+                : null}
+            </div>
             <button
               className="mt-8 self-start border border-black bg-black px-4 py-2 text-white transition duration-300 hover:bg-transparent hover:text-black"
               onClick={() => setActiveCategory(null)}
@@ -89,7 +102,7 @@ export const Category = ({
         </div>
         <div
           id="useCaseWrapper"
-          className="relative flex h-full w-[60%] overflow-y-auto"
+          className="relative flex h-full overflow-y-auto lg:w-[60%]"
         >
           {activeCase ? (
             <Image

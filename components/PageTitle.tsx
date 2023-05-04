@@ -12,7 +12,7 @@ const PageTitle = ({
   absolute = "false",
 }: PageTitleProps) => {
   const isAbsolute = {
-    true: "absolute lg:top-[172px] 2xl:top-[237px]",
+    true: "text-center lg:text-left lg:absolute lg:top-[172px] 2xl:top-[237px]",
     false: "lg:mt-[172px] 2xl:mt-[237px]",
   };
   return (

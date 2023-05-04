@@ -6,6 +6,7 @@ import useSWR from "swr";
 import PageTitle from "@/components/PageTitle";
 import { IUseCase, UseCase } from "@/data/IUseCase";
 import { Category } from "./components/category";
+import MobileMenu from "@/components/MobileMenu";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -15,10 +16,11 @@ export default function Page() {
   const { data, isLoading } = useSWR<IUseCase>("/api", fetcher);
   return (
     <>
+      <MobileMenu isBlackMenu={true} />
       {!isLoading && data && !activeCategory ? (
-        <main className="relative z-[11] h-[calc(100dvh)] xl:ml-[196px] xl:mr-[162px]  2xl:mr-[232px]">
+        <main className="relative z-[11] h-[calc(100dvh)] bg-white pt-[90px]  lg:ml-[142px] lg:bg-transparent lg:pt-0 xl:ml-[196px] xl:mr-[162px] 2xl:mr-[232px]">
           <div className="flex h-full w-full">
-            <div className="flex h-full w-[40%] flex-col justify-center">
+            <div className="flex h-full w-full flex-col lg:w-[40%] lg:justify-center">
               <PageTitle
                 extraWrapperClass="uppercase"
                 text="Portfolio"
@@ -35,10 +37,10 @@ export default function Page() {
                         duration: 0.5,
                         delay: (index + 1) * 0.2,
                       }}
-                      className="flex w-3/4"
+                      className="mx-auto flex w-1/2 lg:mx-0 lg:w-3/4"
                     >
                       <button
-                        className="w-full py-2 pl-2 text-left text-lg font-medium uppercase transition duration-300 hover:bg-black hover:text-white"
+                        className="my-8 w-full py-2 pl-2 text-center text-lg font-medium uppercase transition duration-300 hover:bg-black hover:text-white lg:my-0 lg:text-left"
                         onMouseOver={() => setHoveredItem(item.name)}
                         onMouseLeave={() => setHoveredItem("")}
                         onClick={() => setActiveCategory(item)}
@@ -49,7 +51,7 @@ export default function Page() {
                   ))
                 : null}
             </div>
-            <div className="relative flex h-full w-[60%]">
+            <div className="relative flex h-full lg:w-[60%]">
               {data.useCases
                 ? data.useCases.map((item, index) => (
                     <Image

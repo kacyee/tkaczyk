@@ -125,6 +125,9 @@ li .splide__pagination__page.is-active {
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
+#nav-icon3.blackMenu:not(.open) span {
+  background: #000;
+}
 
 #nav-icon3 span:nth-child(1) {
   top: 0px;
@@ -163,4 +166,14 @@ li .splide__pagination__page.is-active {
   top: 18px;
   width: 0%;
   left: 50%;
+}
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
