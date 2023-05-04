@@ -49,11 +49,11 @@ export default function Contact() {
               initial={{ translateX: -30, opacity: 0 }}
               animate={{ translateX: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 0.5, delay: 1 }}
-              className="mt-[30px] text-center text-lg lg:mt-0"
+              className="mt-[30px] text-center text-lg lg:mt-0 lg:text-left"
             >
               <a
                 href="mailto:paweltkaczyk.design@gmail.com"
-                className=" font-semibold transition duration-300 hover:text-white lg:text-left"
+                className=" font-semibold transition duration-300 hover:text-white"
               >
                 paweltkaczyk.design@gmail.com
               </a>
@@ -62,7 +62,7 @@ export default function Contact() {
               initial={{ translateX: -30, opacity: 0 }}
               animate={{ translateX: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 0.5, delay: 1.1 }}
-              className="mt-[30px] text-center text-lg"
+              className="mt-[30px] text-center text-lg lg:text-left"
             >
               <a
                 className=" text-lg font-semibold transition duration-300 hover:text-white"
@@ -75,7 +75,7 @@ export default function Contact() {
               initial={{ translateX: -30, opacity: 0 }}
               animate={{ translateX: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 0.5, delay: 1.2 }}
-              className="mt-[30px] text-center text-lg"
+              className="mt-[30px] text-center text-lg lg:text-left"
             >
               <a
                 className="mt-[30px] text-lg font-semibold transition duration-300 hover:text-white"
