@@ -15,7 +15,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="relative h-screen max-h-screen w-full bg-black">
+      <body className="relative h-[calc(100dvh)] max-h-[calc(100dvh)] w-full bg-black">
         <AppContextProvider>
           <Menu />
           {children}

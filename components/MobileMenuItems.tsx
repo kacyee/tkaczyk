@@ -17,7 +17,7 @@ const MobileMenuItems = ({
     <>
       <div
         className={classNames(
-          "absolute z-[1000] flex h-full max-h-screen w-full flex-col",
+          "absolute z-[1000] flex h-full max-h-[calc(100dvh)] w-full flex-col",
           {
             hidden: !isMobileMenuActive,
           }

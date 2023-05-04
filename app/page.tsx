@@ -57,13 +57,13 @@ export default function Home() {
         <main
           ref={containerRef}
           className={classNames(
-            `absolute z-10 h-screen select-none overflow-hidden opacity-0 transition-[opacity] duration-300 xl:w-[calc(100vw-18rem)] xl:pl-5 xl:pr-16 xl:pt-8 2xl:w-[calc(100vw-426px)] 2xl:pl-[240px] 2xl:pt-[80px] 2xl:pr-24`,
+            `absolute z-10 h-[calc(100dvh)] select-none overflow-hidden opacity-0 transition-[opacity] duration-300 lg:w-[calc(100vw-18rem)] xl:pl-5 xl:pr-16 xl:pt-8 2xl:w-[calc(100vw-426px)] 2xl:pl-[240px] 2xl:pt-[80px] 2xl:pr-24`,
             {
               "opacity-100": activePage === "/",
             }
           )}
         >
-          <section className="hidden items-center justify-between px-4 lg:flex lg:px-0">
+          <section className="hidden items-center justify-between px-4 lg:flex lg:px-8 xl:px-0">
             <Image
               src="/images/logo.svg"
               width="67"
@@ -146,7 +146,7 @@ export default function Home() {
           <section
             id="intro"
             className={classNames(
-              "intro mt-18 px-[35px] text-white opacity-0 transition duration-1000 lg:px-[0] lg:text-2xl xl:w-3/4 xl:pl-[110px] 2xl:pl-0",
+              "intro mt-18 px-[35px] text-white opacity-0 transition duration-1000 sm:mt-32 lg:px-[0] lg:text-2xl xl:w-3/4 xl:pl-[110px] 2xl:pl-0",
               {
                 "opacity-100": showText,
               }

@@ -16,7 +16,7 @@ export default function Page() {
   return (
     <>
       {!isLoading && data && !activeCategory ? (
-        <main className="relative z-[11] h-screen xl:ml-[196px] xl:mr-[162px]  2xl:mr-[232px]">
+        <main className="relative z-[11] h-[calc(100dvh)] xl:ml-[196px] xl:mr-[162px]  2xl:mr-[232px]">
           <div className="flex h-full w-full">
             <div className="flex h-full w-[40%] flex-col justify-center">
               <PageTitle

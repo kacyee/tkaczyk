@@ -19,7 +19,7 @@ export default function Services() {
   }, []);
 
   return (
-    <main className="relative z-[11] h-screen overflow-hidden xl:ml-[450px]  xl:mr-[162px] 2xl:mr-[232px]">
+    <main className="relative z-[11] h-[calc(100dvh)] overflow-hidden xl:ml-[450px]  xl:mr-[162px] 2xl:mr-[232px]">
       <div className="flex h-full w-full justify-between">
         <div className="flex h-full w-[40%] flex-col">
           <motion.div

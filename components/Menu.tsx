@@ -12,8 +12,8 @@ const Menu = () => {
   const { activePage, setActivePage } = useContext<AppContextState>(AppContext);
 
   return (
-    <header className="relative z-10 hidden lg:block">
-      <div className="absolute flex h-screen w-full text-xl">
+    <header className="relative z-[11] hidden lg:block">
+      <div className="absolute flex h-[calc(100dvh)] w-full text-xl">
         <Link
           href="/"
           onClick={() => setActivePage("/")}
@@ -42,7 +42,7 @@ const Menu = () => {
             `ml-auto  flex h-full items-center justify-center bg-white transition-all duration-700`,
             {
               "w-full": activePage === routes.PORTFOLIO,
-              "xl:w-24 2xl:w-[142px]": activePage !== routes.PORTFOLIO,
+              "lg:w-24 2xl:w-[142px]": activePage !== routes.PORTFOLIO,
             }
           )}
         >
@@ -61,7 +61,7 @@ const Menu = () => {
             `flex h-full items-center justify-center bg-yellow transition-all duration-700`,
             {
               "w-full": activePage === routes.SERVICES,
-              "xl:w-24 2xl:w-[142px]": activePage !== routes.SERVICES,
+              "lg:w-24 2xl:w-[142px]": activePage !== routes.SERVICES,
             }
           )}
         >
@@ -80,7 +80,7 @@ const Menu = () => {
             `flex h-full items-center justify-center bg-blue transition-all duration-700`,
             {
               "w-full": activePage === routes.CONTACT,
-              "xl:w-24 2xl:w-[142px]": activePage !== routes.CONTACT,
+              "lg:w-24 2xl:w-[142px]": activePage !== routes.CONTACT,
             }
           )}
         >

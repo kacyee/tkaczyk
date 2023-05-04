@@ -2,10 +2,6 @@
 
 import { Dispatch, SetStateAction, useContext, useState } from "react";
 import Image from "next/image";
-import { routes } from "@/app/constants/routes";
-import classNames from "classnames";
-import { motion } from "framer-motion";
-import Link from "next/link";
 import { AppContextState, AppContext } from "@/app/context/AppContext";
 import MobileMenuItems from "./MobileMenuItems";
 
@@ -25,13 +21,14 @@ const MobileMenu = ({
         />
       ) : null}
       <div className="absolute top-0 z-[1001]  flex w-full items-center justify-center px-4 lg:hidden">
-        <Image
-          src="/images/logo.svg"
-          width="67"
-          height="51"
-          alt="Logo Paweł Tkaczyk"
-          className={`w-1/4 ${isMobileMenuActive ? "opacity-0" : ""}`}
-        />
+        <div className={`w-1/4 ${isMobileMenuActive ? "opacity-0" : ""}`}>
+          <Image
+            src="/images/logo.svg"
+            width="67"
+            height="51"
+            alt="Logo Paweł Tkaczyk"
+          />
+        </div>
         <button
           onClick={() => setShowText(true)}
           className={`h-fit w-2/4 text-xl font-bold uppercase text-white ${

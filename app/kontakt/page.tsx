@@ -35,7 +35,7 @@ export default function Contact() {
   }, [emailSent]);
 
   return (
-    <main className="relative z-[11] h-screen overflow-hidden xl:ml-[346px] xl:mr-[90px]  2xl:ml-[788px] 2xl:mr-[459px]">
+    <main className="relative z-[11] h-[calc(100dvh)] overflow-hidden xl:ml-[346px] xl:mr-[90px]  2xl:ml-[788px] 2xl:mr-[459px]">
       <div className="grid h-full grid-cols-2">
         <div className="flex flex-col border-r border-white uppercase">
           <motion.div
