@@ -115,6 +115,7 @@ export const Category = ({
               quality={100}
               className="h-max w-full overflow-y-auto"
               unoptimized={true}
+              loading={"lazy"}
             />
           ) : null}
         </div>
