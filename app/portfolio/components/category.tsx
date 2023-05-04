@@ -13,7 +13,9 @@ export const Category = ({
   activeCategory,
   setActiveCategory,
 }: CategoryProps) => {
-  const [activeCase, setActiveCase] = useState<singleCase | null>(null);
+  const [activeCase, setActiveCase] = useState<singleCase | null>(
+    activeCategory.cases[0]
+  );
   const imageRef = useRef<HTMLImageElement>(null);
   const [activeHeight, setActiveHeight] = useState<number>(0);
   const [activeWidth, setActiveWidth] = useState<number>(0);
@@ -51,7 +53,7 @@ export const Category = ({
                       className="mr-4 flex bg-black lg:mr-0 lg:w-full lg:bg-transparent "
                     >
                       <button
-                        className="relative w-full py-2 pl-2 text-left  text-lg font-medium uppercase transition duration-300 "
+                        className="relative w-full py-2 px-2 text-left  text-lg font-medium uppercase transition duration-300 "
                         onClick={() => {
                           setActiveCase(item);
                           calculateHeight();

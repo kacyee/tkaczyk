@@ -82,9 +82,16 @@ li .splide__pagination__page.is-active {
   opacity: 0;
 }
 
-.servicesList {
-  list-style: disc;
-  margin-left: 1rem;
+@media screen and (min-width: 1024px) {
+  .servicesList {
+    list-style: disc;
+    margin-left: 1rem;
+  }
+}
+@media screen and (max-width: 1023.99px) {
+  .servicesList li {
+    text-align: center;
+  }
 }
 .servicesList li {
   margin-bottom: 1rem;
