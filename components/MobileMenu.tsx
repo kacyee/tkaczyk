@@ -26,7 +26,7 @@ const MobileMenu = ({
       <div className="absolute top-[16px] z-[1001]  flex w-full items-center justify-center px-4 lg:hidden">
         <div className={`w-1/4 ${isMobileMenuActive ? "opacity-0" : ""}`}>
           <Image
-            src={!isBlackMenu ? "/images/logo.svg" : "/images/logo-black.svg"}
+            src={!isBlackMenu ? "/images/logo.svg" : "/images/Logo-black.svg"}
             width="67"
             height="51"
             alt="Logo Paweł Tkaczyk"

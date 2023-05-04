@@ -1,12 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import { FormEventHandler, useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import MobileMenu from "@/components/MobileMenu";
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
-  const [emailSent, setEmailSent] = useState<boolean>(true);
+  const [emailSent, setEmailSent] = useState<boolean>(false);
   const sendEmail = (e: React.SyntheticEvent) => {
     e.preventDefault();
     emailjs
