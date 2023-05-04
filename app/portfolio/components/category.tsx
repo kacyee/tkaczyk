@@ -102,7 +102,7 @@ export const Category = ({
         </div>
         <div
           id="useCaseWrapper"
-          className="relative flex h-full overflow-y-auto lg:w-[60%]"
+          className="lg:shrink-1 relative mt-4 flex h-full shrink-0 overflow-y-auto lg:mt-0 lg:w-[60%]"
         >
           {activeCase ? (
             <Image
