@@ -21,10 +21,10 @@ export default function Contact({
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_ovz64l8",
-        "template_6tizw0k",
+        process.env.NEXT_PUBLIC_SERVICE!,
+        process.env.NEXT_PUBLIC_TEMPLATE!,
         form.current!,
-        "q0vClDD5NP9_dCLUk"
+        process.env.NEXT_PUBLIC_PUBLICKEY!
       )
       .then(
         (result) => {
@@ -168,7 +168,7 @@ export default function Contact({
                       ></path>
                     </svg>
                     <div className="pl-4 text-sm font-normal">
-                      Wiadomość wysłana!
+                      {t("message_sent")}
                     </div>
                   </div>
                 </motion.nav>

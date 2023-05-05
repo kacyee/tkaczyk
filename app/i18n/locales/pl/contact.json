@@ -3,5 +3,6 @@
   "send": "Prześlij",
   "question": "pytanie",
   "first_name": "Imię",
-  "message": "Wiadomość"
+  "message": "Wiadomość",
+  "message_sent": "Wiadomość wysłana!"
 }

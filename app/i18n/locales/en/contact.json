@@ -3,5 +3,6 @@
   "send": "Send",
   "question": "question",
   "first_name": "First name",
-  "message": "Message"
+  "message": "Message",
+  "message_sent": "Message sent!"
 }
