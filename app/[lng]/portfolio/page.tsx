@@ -10,7 +10,13 @@ import MobileMenu from "@/components/MobileMenu";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-export default function Page() {
+export default function Page({
+  params: { lng },
+}: {
+  params: {
+    lng: string;
+  };
+}) {
   const [hoveredItem, setHoveredItem] = useState<string>("");
   const [activeCategory, setActiveCategory] = useState<UseCase | null>(null);
   const { data, isLoading } = useSWR<IUseCase>("/api", fetcher);
@@ -41,11 +47,13 @@ export default function Page() {
                     >
                       <button
                         className="my-8 w-full py-2 pl-2 text-center text-lg font-medium uppercase transition duration-300 hover:bg-black hover:text-white lg:my-0 lg:text-left"
-                        onMouseOver={() => setHoveredItem(item.name)}
+                        onMouseOver={() =>
+                          setHoveredItem(item.name[lng as "pl" | "en"])
+                        }
                         onMouseLeave={() => setHoveredItem("")}
                         onClick={() => setActiveCategory(item)}
                       >
-                        {item.name}
+                        {item.name[lng as "pl" | "en"]}
                       </button>
                     </motion.nav>
                   ))
@@ -60,7 +68,9 @@ export default function Page() {
                       src={item.image}
                       key={`${item.image} ${index}`}
                       className={` object-cover opacity-0 transition duration-500 ${
-                        hoveredItem === item.name ? "opacity-100" : ""
+                        hoveredItem === item.name[lng as "pl" | "en"]
+                          ? "opacity-100"
+                          : ""
                       }`}
                     />
                   ))
@@ -72,6 +82,7 @@ export default function Page() {
         <>
           {activeCategory ? (
             <Category
+              lang={lng as "pl" | "en"}
               activeCategory={activeCategory!}
               setActiveCategory={setActiveCategory}
             />

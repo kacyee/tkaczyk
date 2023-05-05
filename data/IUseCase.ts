@@ -1,12 +1,12 @@
 export type singleCase = {
-  name: string;
+  name: { en: string; pl: string };
   url: string;
   hoverBgColor: string;
   hoverFontColor: string;
 };
 
 export type UseCase = {
-  name: string;
+  name: { en: string; pl: string };
   image: string;
   cases: singleCase[];
 };

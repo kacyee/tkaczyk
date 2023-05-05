@@ -19,7 +19,9 @@ export type AppContextState = {
 
 export const AppContextProvider = ({ children }: AppContextProps) => {
   const pathName = usePathname();
-  const [activePage, setActivePage] = useState<string>(pathName);
+  const [activePage, setActivePage] = useState<string>(
+    pathName.replace("/en", "/").replace("/pl", "/").replace("//", "/")
+  );
   return (
     <AppContext.Provider value={{ activePage, setActivePage }}>
       {children}

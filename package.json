@@ -29,7 +29,12 @@
     "three": "^0.150.0",
     "typeit-react": "^2.6.4",
     "typescript": "4.9.5",
-    "vanta": "^0.5.24"
+    "vanta": "^0.5.24",
+    "accept-language": "3.0.18",
+    "i18next": "22.4.9",
+    "i18next-browser-languagedetector": "7.0.1",
+    "i18next-resources-to-backend": "1.1.1",
+    "react-i18next": "12.1.4"
   },
   "devDependencies": {
     "@types/three": "^0.149.0",

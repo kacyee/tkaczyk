@@ -7,15 +7,16 @@ import { useContext } from "react";
 import { routes } from "../app/constants/routes";
 import { AppContext, AppContextState } from "../app/context/AppContext";
 import { motion } from "framer-motion";
+import { useTranslation } from "@/app/i18n/client";
 
-const Menu = () => {
+const Menu = ({ lang }: { lang: string }) => {
   const { activePage, setActivePage } = useContext<AppContextState>(AppContext);
-
+  const { t } = useTranslation(lang, "menu");
   return (
     <header className="relative z-[11] hidden lg:block">
       <div className="absolute flex h-[calc(100dvh)] w-full text-xl">
         <Link
-          href="/"
+          href={`/${lang}`}
           onClick={() => setActivePage("/")}
           className={classNames(
             `flex h-full items-center justify-center bg-black text-white transition-all duration-1000`,
@@ -33,10 +34,10 @@ const Menu = () => {
           >
             <Image src="/images/logo.svg" width="67" height="51" alt="logo" />
           </motion.nav>
-          <span className="orientation-upright uppercase">Strona główna</span>
+          <span className="orientation-upright uppercase">{t("homepage")}</span>
         </Link>
         <Link
-          href={routes.PORTFOLIO}
+          href={`/${lang}${routes.PORTFOLIO}`}
           onClick={() => setActivePage(routes.PORTFOLIO)}
           className={classNames(
             `ml-auto  flex h-full items-center justify-center bg-white transition-all duration-700`,
@@ -51,11 +52,11 @@ const Menu = () => {
               activePage === routes.PORTFOLIO ? "opacity-0" : ""
             }`}
           >
-            Portfolio
+            {t("portfolio")}
           </span>
         </Link>
         <Link
-          href={routes.SERVICES}
+          href={`/${lang}${routes.SERVICES}`}
           onClick={() => setActivePage(routes.SERVICES)}
           className={classNames(
             `flex h-full items-center justify-center bg-yellow transition-all duration-700`,
@@ -70,11 +71,11 @@ const Menu = () => {
               activePage === routes.SERVICES ? "opacity-0" : ""
             }`}
           >
-            Usługi
+            {t("services")}
           </span>
         </Link>
         <Link
-          href={routes.CONTACT}
+          href={`/${lang}${routes.CONTACT}`}
           onClick={() => setActivePage(routes.CONTACT)}
           className={classNames(
             `flex h-full items-center justify-center bg-blue transition-all duration-700`,
@@ -89,7 +90,7 @@ const Menu = () => {
               activePage === routes.CONTACT ? "opacity-0" : ""
             }`}
           >
-            Kontakt
+            {t("contact")}
           </span>
         </Link>
       </div>

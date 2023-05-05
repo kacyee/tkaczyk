@@ -3,10 +3,20 @@ import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import MobileMenu from "@/components/MobileMenu";
+import { t } from "i18next";
+import { useTranslation } from "@/app/i18n/client";
 
-export default function Contact() {
+export default function Contact({
+  params: { lng },
+}: {
+  params: {
+    lng: string;
+  };
+}) {
   const form = useRef<HTMLFormElement>(null);
   const [emailSent, setEmailSent] = useState<boolean>(false);
+  const { t } = useTranslation(lng, "contact");
+
   const sendEmail = (e: React.SyntheticEvent) => {
     e.preventDefault();
     emailjs
@@ -42,7 +52,7 @@ export default function Contact() {
               transition={{ ease: "easeInOut", duration: 0.4, delay: 0.7 }}
             >
               <h2 className="text-center text-[64px] font-bold text-black lg:text-left xl:mt-[175px] xl:mb-[70px] 2xl:mt-[394px]">
-                Kontakt
+                {t("title")}
               </h2>
             </motion.div>
             <motion.nav
@@ -93,9 +103,9 @@ export default function Contact() {
               className="lg:px0 px-4"
             >
               <h2 className="mx-auto mt-[30px] w-max text-center text-[64px] font-bold leading-none text-white lg:mx-0 lg:text-left xl:mt-[175px] xl:mb-[70px] 2xl:mt-[394px]">
-                Prześlij
+                {t("send")}
                 <span className="block text-center text-[26px] lg:text-right">
-                  pytanie
+                  {t("question")}
                 </span>
               </h2>
             </motion.div>
@@ -110,7 +120,7 @@ export default function Contact() {
                   type="text"
                   name="user_name"
                   className=" mt-4 mb-4 border-b border-white bg-transparent py-2 text-center uppercase text-white placeholder-white outline-none lg:mt-0 lg:text-left"
-                  placeholder="imię"
+                  placeholder={t("first_name")!}
                 />
                 <input
                   type="email"
@@ -119,7 +129,7 @@ export default function Contact() {
                   placeholder="EMAIL"
                 />
                 <label className="mb-2 text-center text-white lg:text-left ">
-                  Wiadomość
+                  {t("message")}
                 </label>
                 <textarea
                   name="message"
@@ -127,7 +137,7 @@ export default function Contact() {
                 />
                 <input
                   type="submit"
-                  value="Wyślij"
+                  value={t("send")!}
                   className="mt-4 w-full cursor-pointer border border-black bg-black px-6 py-2 text-lg text-white transition duration-300 hover:border-white hover:bg-transparent  hover:text-white lg:ml-auto lg:w-max"
                 />
               </form>

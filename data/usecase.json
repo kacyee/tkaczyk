@@ -1,29 +1,32 @@
 {
   "useCases": [
     {
-      "name": "UX/UI",
+      "name": { "en": "UX/UI", "pl": "UX/UI" },
       "image": "/images/ux-background.png",
       "cases": [
         {
-          "name": "Connect-Trans",
+          "name": { "en": "Connect Trans", "pl": "Connect Trans" },
           "url": "/images/usecases/MoneviaCS_1440_2x.png",
           "hoverBgColor": "#ED1A3B",
           "hoverFontColor": "#FFF"
         },
         {
-          "name": "Aplikacja Diagnostów laboratoryjnych",
+          "name": {
+            "pl": "Aplikacja Diagnostów laboratoryjnych",
+            "en": "Laboratory diagnosis app"
+          },
           "url": "/images/usecases/MoneviaCS_1440_2x.png",
           "hoverBgColor": "#D3D3D3",
           "hoverFontColor": "#FFF"
         },
         {
-          "name": "Picdone",
+          "name": { "en": "Picdone", "pl": "Picdone" },
           "url": "/images/usecases/MoneviaCS_1440_2x.png",
           "hoverBgColor": "#D3D3D3",
           "hoverFontColor": "#FFF"
         },
         {
-          "name": "UFG",
+          "name": { "en": "UFG", "pl": "UFG" },
           "url": "/images/usecases/MoneviaCS_1440_2x.png",
           "hoverBgColor": "#000",
           "hoverFontColor": "#FFF"
@@ -31,29 +34,32 @@
       ]
     },
     {
-      "name": "Marketing",
+      "name": { "en": "Marketing", "pl": "Marketing" },
       "image": "/images/jar.jpg",
       "cases": [
         {
-          "name": "Connect-Trans",
+          "name": { "en": "Connect Trans", "pl": "Connect Trans" },
           "url": "/images/usecases/MoneviaCS_1440_2x.png",
-          "hoverBgColor": "#000",
+          "hoverBgColor": "#ED1A3B",
           "hoverFontColor": "#FFF"
         },
         {
-          "name": "Aplikacja Diagnostów laboratoryjnych",
+          "name": {
+            "pl": "Aplikacja Diagnostów laboratoryjnych",
+            "en": "Laboratory diagnosis app"
+          },
           "url": "/images/usecases/MoneviaCS_1440_2x.png",
-          "hoverBgColor": "#000",
+          "hoverBgColor": "#D3D3D3",
           "hoverFontColor": "#FFF"
         },
         {
-          "name": "Picdone",
+          "name": { "en": "Picdone", "pl": "Picdone" },
           "url": "/images/usecases/MoneviaCS_1440_2x.png",
-          "hoverBgColor": "#000",
+          "hoverBgColor": "#D3D3D3",
           "hoverFontColor": "#FFF"
         },
         {
-          "name": "UFG",
+          "name": { "en": "UFG", "pl": "UFG" },
           "url": "/images/usecases/MoneviaCS_1440_2x.png",
           "hoverBgColor": "#000",
           "hoverFontColor": "#FFF"
@@ -61,29 +67,32 @@
       ]
     },
     {
-      "name": "Inne",
+      "name": { "en": "Others", "pl": "Inne" },
       "image": "/images/paluch.jpg",
       "cases": [
         {
-          "name": "Connect-Trans",
+          "name": { "en": "Connect Trans", "pl": "Connect Trans" },
           "url": "/images/usecases/MoneviaCS_1440_2x.png",
-          "hoverBgColor": "#000",
+          "hoverBgColor": "#ED1A3B",
           "hoverFontColor": "#FFF"
         },
         {
-          "name": "Aplikacja Diagnostów laboratoryjnych",
+          "name": {
+            "pl": "Aplikacja Diagnostów laboratoryjnych",
+            "en": "Laboratory diagnosis app"
+          },
           "url": "/images/usecases/MoneviaCS_1440_2x.png",
-          "hoverBgColor": "#000",
+          "hoverBgColor": "#D3D3D3",
           "hoverFontColor": "#FFF"
         },
         {
-          "name": "Picdone",
+          "name": { "en": "Picdone", "pl": "Picdone" },
           "url": "/images/usecases/MoneviaCS_1440_2x.png",
-          "hoverBgColor": "#000",
+          "hoverBgColor": "#D3D3D3",
           "hoverFontColor": "#FFF"
         },
         {
-          "name": "UFG",
+          "name": { "en": "UFG", "pl": "UFG" },
           "url": "/images/usecases/MoneviaCS_1440_2x.png",
           "hoverBgColor": "#000",
           "hoverFontColor": "#FFF"

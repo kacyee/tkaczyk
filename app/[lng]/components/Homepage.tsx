@@ -3,27 +3,34 @@ import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { useContext, useEffect, useRef, useState } from "react";
-import { AppContext, AppContextState } from "./context/AppContext";
+import { AppContext, AppContextState } from "../../context/AppContext";
 // @ts-ignore
 import WAVES from "vanta/dist/vanta.waves.min";
 import * as THREE from "three";
 import Delayed from "@/components/Delayed";
 import TypeIt from "typeit-react";
 import MobileMenu from "@/components/MobileMenu";
-import { routes } from "./constants/routes";
-export default function Home() {
+import { routes } from "../../constants/routes";
+import { useTranslation } from "../../i18n/client";
+import { usePathname } from "next/navigation";
+
+export const Homepage = ({ lang }: { lang: string }) => {
   const { activePage, setActivePage } = useContext<AppContextState>(AppContext);
   const [vantaEffect, setVantaEffect] = useState<any>(null);
   const [isShown, setIsShown] = useState<boolean>(false);
   const [titleFinished, setTitleFinished] = useState<boolean>(false);
   const [showText, setShowText] = useState<boolean>(false);
   const containerRef = useRef<HTMLElement>(null);
+  const pathName = usePathname();
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsShown(true);
     }, 699);
     return () => clearTimeout(timer);
   }, []);
+
+  const { t } = useTranslation(lang, "homepage");
 
   useEffect(() => {
     if (!vantaEffect && isShown) {
@@ -75,11 +82,22 @@ export default function Home() {
                 onClick={() => setShowText(!showText)}
                 className="h-fit text-xl font-bold uppercase text-white"
               >
-                Kim jestem?
+                {t("who_am_i")}
               </button>
               <div className="ml-8 block text-xl text-white">
-                <span className="font-bold">PL </span>
-                <span>/ EN</span>
+                <Link
+                  href={`/pl`}
+                  className={`${lang === "pl" ? "font-bold" : ""}`}
+                >
+                  PL{" "}
+                </Link>
+                <span>/</span>
+                <Link
+                  href={`/en`}
+                  className={`${lang === "en" ? "font-bold" : ""}`}
+                >
+                  EN
+                </Link>
               </div>
             </div>
           </section>
@@ -152,17 +170,10 @@ export default function Home() {
               }
             )}
           >
-            <p className="mb-6">Cześć, nazywam się Paweł Tkaczyk.</p>
-            <p className="mb-6">
-              Jestem designerem współtworzącym od podstaw strony i aplikacje z
-              grupą zaprzyjaźnionych programistów, dla których ważna jest jakość
-              oraz rozwój. Projektuje także materiały POS i przygotowuje je do
-              druku.{" "}
-            </p>
+            <p className="mb-6">{t("who_am_i_heading")}</p>
+            <p className="mb-6">{t("who_am_i_first_description")} </p>
             <p className="xl:hidden 2xl:block">
-              Z chęcią staje na przeciw wszelkim wyzwaniom, tworze i wdrażam
-              własne rozwiązania, sprawdzone rozwiązania lub modyfikuje i
-              usprawniam Twoje.
+              {t("who_am_i_second_description")}
             </p>
           </section>
           <section
@@ -175,14 +186,17 @@ export default function Home() {
             )}
           >
             <Link
-              href={"/uslugi"}
+              href={`${lang}${routes.SERVICES}`}
               onClick={() => setActivePage(routes.SERVICES)}
             >
-              <h2 className="leading-1 leading-none text-yellow xl:mt-12 xl:text-[120px]">
-                Zobacz, co<span className="block lg:hidden"></span> mogę{" "}
-                <span className="hidden xl:block"></span>
-                dla Ciebie zrobić.
-              </h2>
+              <h2
+                className="leading-1 leading-none text-yellow xl:mt-12 xl:text-[120px]"
+                dangerouslySetInnerHTML={{
+                  __html: t("who_am_i_look", {
+                    interpolation: { escapeValue: false },
+                  }),
+                }}
+              ></h2>
               <Image
                 width={200}
                 height={20}
@@ -196,4 +210,4 @@ export default function Home() {
       </>
     </Delayed>
   );
-}
+};

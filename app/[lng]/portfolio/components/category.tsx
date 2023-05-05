@@ -7,11 +7,13 @@ import Image from "next/image";
 type CategoryProps = {
   activeCategory: UseCase;
   setActiveCategory: Dispatch<SetStateAction<UseCase | null>>;
+  lang: "pl" | "en";
 };
 
 export const Category = ({
   activeCategory,
   setActiveCategory,
+  lang,
 }: CategoryProps) => {
   const [activeCase, setActiveCase] = useState<singleCase | null>(
     activeCategory.cases[0]
@@ -34,7 +36,7 @@ export const Category = ({
         <div className="flex h-full flex-col lg:w-[40%] lg:justify-center">
           <PageTitle
             extraWrapperClass="uppercase"
-            text={activeCategory.name}
+            text={activeCategory.name[lang]}
             absolute="true"
           />
           <div className="lg:pt-36 xxl:pt-0">
@@ -61,7 +63,9 @@ export const Category = ({
                       >
                         <div
                           className={`absolute top-0 left-0 h-full w-full transition duration-300 ${
-                            activeCase?.name !== item.name ? "hidden" : ""
+                            activeCase?.name[lang] !== item.name[lang]
+                              ? "hidden"
+                              : ""
                           }`}
                           style={{
                             background: item.hoverBgColor,
@@ -76,7 +80,7 @@ export const Category = ({
                                 : "#000",
                           }}
                         >
-                          {item.name}
+                          {item.name[lang]}
                         </span>
                         <span
                           className="relative z-10 flex h-full  items-center whitespace-nowrap py-2 px-2 text-white lg:hidden"
@@ -87,7 +91,7 @@ export const Category = ({
                                 : "#fff",
                           }}
                         >
-                          {item.name}
+                          {item.name[lang]}
                         </span>
                       </button>
                     </motion.nav>
@@ -109,8 +113,8 @@ export const Category = ({
           {activeCase ? (
             <Image
               src={activeCase.url}
-              alt={activeCase.name}
-              id={activeCase.name}
+              alt={activeCase.name[lang]}
+              id={activeCase.name[lang]}
               ref={imageRef}
               width={activeWidth}
               height={activeHeight}

@@ -1,4 +1,5 @@
 "use client";
+import { useTranslation } from "@/app/i18n/client";
 import MobileMenu from "@/components/MobileMenu";
 import PageTitle from "@/components/PageTitle";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
@@ -8,10 +9,18 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-export default function Services() {
+export default function Services({
+  params: { lng },
+}: {
+  params: {
+    lng: string;
+  };
+}) {
   const splideRef = useRef<Splide>(null);
   const detailsRef = useRef<Splide>(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState<number>(0);
+
+  const { t } = useTranslation(lng, "services");
 
   useEffect(() => {
     if (splideRef.current && detailsRef.current && detailsRef.current.splide) {
@@ -30,7 +39,10 @@ export default function Services() {
               animate={{ translateX: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 0.4, delay: 0.7 }}
             >
-              <PageTitle extraWrapperClass="lg:mb-8 uppercase" text="Usługi" />
+              <PageTitle
+                extraWrapperClass="lg:mb-8 uppercase"
+                text={t("title")}
+              />
               <Splide
                 ref={splideRef}
                 hasTrack={false}
@@ -109,12 +121,14 @@ export default function Services() {
                     </span>
                     WEB
                   </h2>
-                  <ul className="servicesList text-lg lg:mt-20">
-                    <li>Aplikacje web</li>
-                    <li>Strony www</li>
-                    <li>Landing page</li>
-                    <li>Sklepy internetowe</li>
-                  </ul>
+                  <ul
+                    className="servicesList text-lg lg:mt-20"
+                    dangerouslySetInnerHTML={{
+                      __html: t("services_web", {
+                        interpolation: { escapeValue: false },
+                      }),
+                    }}
+                  ></ul>
                 </SplideSlide>
                 <SplideSlide>
                   <h2 className="relative text-center text-[64px] font-bold uppercase lg:text-left">
@@ -123,25 +137,30 @@ export default function Services() {
                     </span>
                     Mobile
                   </h2>
-                  <ul className="servicesList text-lg uppercase lg:mt-20">
-                    <li>Aplikacje ANDROID</li>
-                    <li>Aplikacje iOS</li>
-                  </ul>
+                  <ul
+                    className="servicesList text-lg uppercase lg:mt-20"
+                    dangerouslySetInnerHTML={{
+                      __html: t("services_mobile", {
+                        interpolation: { escapeValue: false },
+                      }),
+                    }}
+                  ></ul>
                 </SplideSlide>
                 <SplideSlide>
                   <h2 className="relative text-center text-[64px] font-bold uppercase lg:text-left">
                     <span className="absolute left-10 top-5 text-lg font-bold lg:hidden">
                       03
                     </span>
-                    Inne
+                    {t("others")}
                   </h2>
-                  <ul className="servicesList text-lg lg:mt-20">
-                    <li>Design marki</li>
-                    <li>Design produktów</li>
-                    <li>A-Z branding</li>
-                    <li>materiały reklamowe</li>
-                    <li>DTP</li>
-                  </ul>
+                  <ul
+                    className="servicesList text-lg lg:mt-20"
+                    dangerouslySetInnerHTML={{
+                      __html: t("services_others", {
+                        interpolation: { escapeValue: false },
+                      }),
+                    }}
+                  ></ul>
                 </SplideSlide>
               </Splide>
 
