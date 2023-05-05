@@ -5,22 +5,28 @@ import Image from "next/image";
 import { AppContextState, AppContext } from "@/app/context/AppContext";
 import MobileMenuItems from "./MobileMenuItems";
 import classNames from "classnames";
+import { useTranslation } from "@/app/i18n/client";
 
 const MobileMenu = ({
   setShowText,
   isBlackMenu = false,
+  lang,
 }: {
   setShowText?: Dispatch<SetStateAction<boolean>>;
   isBlackMenu?: boolean;
+  lang: string;
 }) => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState<boolean>(false);
   const { setActivePage } = useContext<AppContextState>(AppContext);
+  const { t } = useTranslation(lang, "menu");
+
   return (
     <>
       {isMobileMenuActive ? (
         <MobileMenuItems
           setActivePage={setActivePage}
           isMobileMenuActive={isMobileMenuActive}
+          lang={lang}
         />
       ) : null}
       <div className="absolute top-[16px] z-[1001]  flex w-full items-center justify-center px-4 lg:hidden">
@@ -39,7 +45,7 @@ const MobileMenu = ({
               isMobileMenuActive ? "opacity-0" : ""
             }`}
           >
-            Kim jestem?
+            {t("who_am_i")}
           </button>
         ) : null}
         <div

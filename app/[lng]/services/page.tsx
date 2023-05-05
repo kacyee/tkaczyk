@@ -30,7 +30,7 @@ export default function Services({
 
   return (
     <>
-      <MobileMenu isBlackMenu={true} />
+      <MobileMenu isBlackMenu={true} lang={lng} />
       <main className="relative z-[11] min-h-[calc(100dvh)] bg-yellow pt-[90px] lg:h-[calc(100dvh)]  lg:overflow-hidden lg:bg-transparent lg:pt-0 xl:ml-[450px] xl:mr-[162px] 2xl:mr-[232px]">
         <div className="flex h-full w-full flex-col justify-between lg:flex-row">
           <div className="flex h-full flex-col lg:w-[40%]">

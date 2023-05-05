@@ -22,7 +22,7 @@ export default function Page({
   const { data, isLoading } = useSWR<IUseCase>("/api", fetcher);
   return (
     <>
-      <MobileMenu isBlackMenu={true} />
+      <MobileMenu isBlackMenu={true} lang={lng} />
       {!isLoading && data && !activeCategory ? (
         <main className="relative z-[11] h-[calc(100dvh)] bg-white pt-[90px]  lg:ml-[142px] lg:bg-transparent lg:pt-0 xl:ml-[196px] xl:mr-[162px] 2xl:mr-[232px]">
           <div className="flex h-full w-full">

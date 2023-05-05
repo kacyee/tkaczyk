@@ -1,4 +1,5 @@
 import { routes } from "@/app/constants/routes";
+import { useTranslation } from "@/app/i18n/client";
 import classNames from "classnames";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -7,12 +8,15 @@ import { Dispatch, SetStateAction } from "react";
 type MobileMenuItemsProps = {
   isMobileMenuActive: boolean;
   setActivePage: Dispatch<SetStateAction<string>>;
+  lang: string;
 };
 
 const MobileMenuItems = ({
   isMobileMenuActive,
   setActivePage,
+  lang,
 }: MobileMenuItemsProps) => {
+  const { t } = useTranslation(lang, "menu");
   return (
     <>
       <div
@@ -38,7 +42,7 @@ const MobileMenuItems = ({
             onClick={() => setActivePage("/")}
             className="flex h-full w-full items-center justify-center"
           >
-            <span className="text-xl uppercase">Strona główna</span>
+            <span className="text-xl uppercase">{t("homepage")}</span>
           </Link>
         </motion.nav>
         <motion.nav
@@ -57,7 +61,7 @@ const MobileMenuItems = ({
             className="flex h-full w-full items-center justify-center "
           >
             <span className={`text-xl uppercase transition-all duration-500`}>
-              Portfolio
+              {t("portfolio")}
             </span>
           </Link>
         </motion.nav>
@@ -76,7 +80,7 @@ const MobileMenuItems = ({
             onClick={() => setActivePage(routes.SERVICES)}
             className="flex h-full w-full items-center justify-center bg-yellow"
           >
-            <span className={`text-xl uppercase`}>Usługi</span>
+            <span className={`text-xl uppercase`}>{t("services")}</span>
           </Link>
         </motion.nav>
         <motion.nav
@@ -94,7 +98,7 @@ const MobileMenuItems = ({
             onClick={() => setActivePage(routes.CONTACT)}
             className="flex h-full w-full items-center justify-center"
           >
-            <span className={`text-xl uppercase`}>Kontakt</span>
+            <span className={`text-xl uppercase`}>{t("contact")}</span>
           </Link>
         </motion.nav>
       </div>

@@ -42,7 +42,7 @@ export default function Contact({
 
   return (
     <>
-      <MobileMenu isBlackMenu={true} />
+      <MobileMenu isBlackMenu={true} lang={lng} />
       <main className="relative z-[11] min-h-[calc(100dvh)] bg-blue pt-[90px] lg:h-[calc(100dvh)] lg:overflow-hidden lg:bg-transparent lg:pt-0  xl:ml-[346px] xl:mr-[90px] 2xl:ml-[788px] 2xl:mr-[459px]">
         <div className="grid h-full lg:grid-cols-2">
           <div className="flex flex-col border-r border-white px-4 uppercase lg:px-0">

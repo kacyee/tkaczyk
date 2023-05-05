@@ -60,7 +60,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
   return (
     <Delayed isShown={isShown}>
       <>
-        <MobileMenu setShowText={setShowText} />
+        <MobileMenu setShowText={setShowText} lang={lang} />
         <main
           ref={containerRef}
           className={classNames(
@@ -207,6 +207,24 @@ export const Homepage = ({ lang }: { lang: string }) => {
             </Link>
           </section>
         </main>
+        <div className="absolute bottom-4 z-[11] grid w-full grid-cols-2 justify-between gap-8 px-8 text-xl text-white lg:hidden">
+          <Link
+            href={`/pl`}
+            className={`${
+              lang === "pl" ? "bg-white text-black" : "bg-black text-white"
+            } border border-white py-1 text-center`}
+          >
+            PL{" "}
+          </Link>
+          <Link
+            href={`/en`}
+            className={`${
+              lang === "en" ? "bg-white text-black" : "bg-black text-white"
+            } border border-white py-1 text-center`}
+          >
+            EN
+          </Link>
+        </div>
       </>
     </Delayed>
   );
