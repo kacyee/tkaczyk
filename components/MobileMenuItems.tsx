@@ -38,7 +38,7 @@ const MobileMenuItems = ({
           className="flex h-1/4 w-full items-center justify-center bg-black text-white"
         >
           <Link
-            href="/"
+            href={`/${lang}`}
             onClick={() => setActivePage("/")}
             className="flex h-full w-full items-center justify-center"
           >
@@ -56,7 +56,7 @@ const MobileMenuItems = ({
           className="flex h-1/4 w-full items-center justify-center bg-white"
         >
           <Link
-            href={routes.PORTFOLIO}
+            href={`/${lang}${routes.PORTFOLIO}`}
             onClick={() => setActivePage(routes.PORTFOLIO)}
             className="flex h-full w-full items-center justify-center "
           >
@@ -76,7 +76,7 @@ const MobileMenuItems = ({
           className="bg-yellowe flex h-1/4 w-full items-center justify-center"
         >
           <Link
-            href={routes.SERVICES}
+            href={`/${lang}${routes.SERVICES}`}
             onClick={() => setActivePage(routes.SERVICES)}
             className="flex h-full w-full items-center justify-center bg-yellow"
           >
@@ -94,7 +94,7 @@ const MobileMenuItems = ({
           className="flex h-1/4 w-full items-center justify-center bg-blue"
         >
           <Link
-            href={routes.CONTACT}
+            href={`/${lang}${routes.CONTACT}`}
             onClick={() => setActivePage(routes.CONTACT)}
             className="flex h-full w-full items-center justify-center"
           >
