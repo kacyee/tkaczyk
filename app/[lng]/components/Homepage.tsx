@@ -12,7 +12,6 @@ import TypeIt from "typeit-react";
 import MobileMenu from "@/components/MobileMenu";
 import { routes } from "../../constants/routes";
 import { useTranslation } from "../../i18n/client";
-import { usePathname } from "next/navigation";
 
 export const Homepage = ({ lang }: { lang: string }) => {
   const { activePage, setActivePage } = useContext<AppContextState>(AppContext);
@@ -21,7 +20,6 @@ export const Homepage = ({ lang }: { lang: string }) => {
   const [titleFinished, setTitleFinished] = useState<boolean>(false);
   const [showText, setShowText] = useState<boolean>(false);
   const containerRef = useRef<HTMLElement>(null);
-  const pathName = usePathname();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -81,7 +79,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
               <button
                 onClick={() => setShowText(!showText)}
                 className={classNames(`h-fit text-xl uppercase text-white`, {
-                  "font-bold": showText,
+                  "font-bold": !showText,
                 })}
               >
                 {t("who_am_i")}

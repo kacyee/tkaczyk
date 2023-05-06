@@ -124,13 +124,13 @@ export default function Contact({
                 <input
                   type="text"
                   name="user_name"
-                  className=" mt-4 mb-6 border-b border-white bg-transparent py-2 text-center uppercase text-white placeholder-white outline-none lg:mt-0 lg:text-left"
+                  className="mt-4 mb-6 rounded-none border-b border-white bg-transparent py-2 text-center uppercase text-white placeholder-white outline-none lg:mt-0 lg:text-left"
                   placeholder={t("first_name")!}
                 />
                 <input
                   type="email"
                   name="user_email"
-                  className="mb-6 border-b border-white bg-transparent py-2 text-center uppercase text-white placeholder-white outline-none lg:text-left"
+                  className="mb-6 rounded-none border-b border-white bg-transparent py-2 text-center uppercase text-white placeholder-white outline-none lg:text-left"
                   placeholder="EMAIL"
                 />
                 <label className="mb-2 text-center text-white lg:text-left ">
@@ -138,12 +138,12 @@ export default function Contact({
                 </label>
                 <textarea
                   name="message"
-                  className="h-[140px] border border-white bg-transparent p-2 text-center text-white outline-none lg:text-left xl:h-[180px] 2xl:h-[250px]"
+                  className=" h-[140px] rounded-none border border-white bg-transparent p-2 text-center text-white outline-none lg:text-left xl:h-[180px] 2xl:h-[250px]"
                 />
                 <input
                   type="submit"
                   value={t("send")!}
-                  className="mt-6 w-full cursor-pointer border border-black bg-black px-6 py-2 text-lg uppercase text-white transition duration-300 hover:border-white hover:bg-transparent  hover:text-white lg:ml-auto lg:w-max"
+                  className=" mt-6 w-full cursor-pointer rounded-none border border-black bg-black px-6 py-2 text-lg uppercase text-white transition duration-300 hover:border-white hover:bg-transparent  hover:text-white lg:ml-auto lg:w-max"
                 />
               </form>
               {emailSent ? (

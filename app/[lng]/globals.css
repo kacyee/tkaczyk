@@ -256,3 +256,7 @@ li .splide__pagination__page.is-active {
     transform: translateX(0px);
   }
 }
+
+input:focus::placeholder {
+  color: transparent;
+}
