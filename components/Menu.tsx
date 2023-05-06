@@ -34,7 +34,9 @@ const Menu = ({ lang }: { lang: string }) => {
           >
             <Image src="/images/logo.svg" width="67" height="51" alt="logo" />
           </motion.nav>
-          <span className="orientation-upright uppercase">{t("homepage")}</span>
+          <span className="orientation-upright uppercase tracking-[.1em]">
+            {t("homepage")}
+          </span>
         </Link>
         <Link
           href={`/${lang}${routes.PORTFOLIO}`}
@@ -48,7 +50,7 @@ const Menu = ({ lang }: { lang: string }) => {
           )}
         >
           <span
-            className={`orientation-upright uppercase transition-all duration-500 ${
+            className={`orientation-upright uppercase tracking-[.1em] transition-all duration-500 ${
               activePage === routes.PORTFOLIO ? "opacity-0" : ""
             }`}
           >
@@ -67,7 +69,7 @@ const Menu = ({ lang }: { lang: string }) => {
           )}
         >
           <span
-            className={`orientation-upright uppercase transition-all duration-500 ${
+            className={`orientation-upright uppercase tracking-[.1em] transition-all duration-500 ${
               activePage === routes.SERVICES ? "opacity-0" : ""
             }`}
           >
@@ -86,7 +88,7 @@ const Menu = ({ lang }: { lang: string }) => {
           )}
         >
           <span
-            className={`orientation-upright uppercase transition-all duration-500 ${
+            className={`orientation-upright uppercase tracking-[.1em] transition-all duration-500 ${
               activePage === routes.CONTACT ? "opacity-0" : ""
             }`}
           >

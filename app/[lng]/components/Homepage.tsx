@@ -80,21 +80,23 @@ export const Homepage = ({ lang }: { lang: string }) => {
             <div className="flex">
               <button
                 onClick={() => setShowText(!showText)}
-                className="h-fit text-xl font-bold uppercase text-white"
+                className={classNames(`h-fit text-xl uppercase text-white`, {
+                  "font-bold": showText,
+                })}
               >
                 {t("who_am_i")}
               </button>
               <div className="ml-8 block text-xl text-white">
                 <Link
                   href={`/pl`}
-                  className={`${lang === "pl" ? "font-bold" : ""}`}
+                  className={`${lang === "pl" ? "font-bold" : "text-gray"}`}
                 >
                   PL{" "}
                 </Link>
-                <span>/</span>
+                <span className="mx-2 text-gray">/</span>
                 <Link
                   href={`/en`}
-                  className={`${lang === "en" ? "font-bold" : ""}`}
+                  className={`${lang === "en" ? "font-bold" : "text-gray"}`}
                 >
                   EN
                 </Link>
@@ -179,7 +181,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
           <section
             id="big-heading"
             className={classNames(
-              "mt-8 px-[35px] text-[48px] tracking-tight opacity-0 transition delay-700 duration-1000 lg:mt-0 lg:px-0 lg:text-inherit xl:pl-[110px] 2xl:pl-0",
+              "mt-8 px-[35px] text-[48px] tracking-tight opacity-0 transition delay-700 duration-1000 lg:px-0 lg:text-inherit xl:pl-[110px] xxl:mt-32 2xl:pl-0",
               {
                 "opacity-100": showText,
               }
@@ -190,7 +192,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
               onClick={() => setActivePage(routes.SERVICES)}
             >
               <h2
-                className="leading-1 leading-none text-yellow xl:mt-12 xl:text-[120px]"
+                className="leading-none text-yellow xl:mt-12 xl:text-[120px] xxl:leading-tight"
                 dangerouslySetInnerHTML={{
                   __html: t("who_am_i_look", {
                     interpolation: { escapeValue: false },

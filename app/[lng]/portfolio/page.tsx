@@ -22,13 +22,18 @@ export default function Page({
   const { data, isLoading } = useSWR<IUseCase>("/api", fetcher);
   return (
     <>
-      <MobileMenu isBlackMenu={true} lang={lng} />
+      <MobileMenu
+        isBlackMenu={true}
+        lang={lng}
+        setActiveCategory={setActiveCategory}
+        activeCategory={activeCategory}
+      />
       {!isLoading && data && !activeCategory ? (
-        <main className="relative z-[11] h-[calc(100dvh)] bg-white pt-[90px]  lg:ml-[142px] lg:bg-transparent lg:pt-0 xl:ml-[196px] xl:mr-[162px] 2xl:mr-[232px]">
+        <main className="relative z-[11] h-[calc(100dvh)] bg-white pt-[90px]  lg:ml-[142px] lg:bg-transparent lg:pt-0 xl:ml-[196px] xl:mr-[162px] xxl:mr-[166px] 2xl:mr-[245px]">
           <div className="flex h-full w-full">
             <div className="flex h-full w-full flex-col lg:w-[40%] lg:justify-center">
               <PageTitle
-                extraWrapperClass="uppercase"
+                extraWrapperClass="uppercase mb-12 lg:mb-0"
                 text="Portfolio"
                 absolute="true"
               />
@@ -46,7 +51,7 @@ export default function Page({
                       className="mx-auto flex w-1/2 lg:mx-0 lg:w-3/4"
                     >
                       <button
-                        className="my-8 w-full py-2 pl-2 text-center text-lg font-medium uppercase transition duration-300 hover:bg-black hover:text-white lg:my-0 lg:text-left"
+                        className="my-4 w-full py-2 pl-2 text-center text-lg font-medium uppercase transition duration-300 hover:bg-black hover:text-white lg:my-0 lg:text-left"
                         onMouseOver={() =>
                           setHoveredItem(item.name[lng as "pl" | "en"])
                         }

@@ -5,7 +5,7 @@ import PageTitle from "@/components/PageTitle";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide-core.min.css";
 import classNames from "classnames";
-import { motion } from "framer-motion";
+import { animate, AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -19,6 +19,7 @@ export default function Services({
   const splideRef = useRef<Splide>(null);
   const detailsRef = useRef<Splide>(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState<number>(0);
+  const [showSwipe, setShowSwipe] = useState<boolean>(true);
 
   const { t } = useTranslation(lng, "services");
 
@@ -30,8 +31,49 @@ export default function Services({
 
   return (
     <>
+      <AnimatePresence>
+        {showSwipe ? (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onAnimationComplete={() => {
+              setTimeout(() => setShowSwipe(false), 500);
+            }}
+            transition={{ ease: "easeInOut", duration: 0.5, delay: 1.3 }}
+            className="wrapper absolute z-[99999] h-full w-full overflow-hidden bg-[rgba(0,0,0,0.1)] lg:hidden"
+          >
+            <svg
+              id="Swipe-horizontal_1"
+              data-name="Swipe horizontal 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 200 200"
+              className="w-1/2 translate-y-3/4 translate-x-1/2"
+            >
+              <path
+                className="hand-x"
+                d="M139.93,113.56l-41.12-6.93V76.08a9.25,9.25,0,0,0-9.25-9.25h0a9.25,9.25,0,0,0-9.25,9.25v57.36L71,122.65c-3.61-3.61-8.44-3.89-13.08,0,0,0-7.24,5.84-3.83,9.25l34,34h42.63a9.25,9.25,0,0,0,9.07-7.43l6.82-34.09A9.28,9.28,0,0,0,139.93,113.56Z"
+              />
+              <g className="swipe-horizontal">
+                <path
+                  className="line-horizontal"
+                  d="M70.85,42c19.69-12.46,37,0,37,0"
+                />
+                <polyline
+                  className="arrow-left"
+                  points="76.6 46.01 68.37 43.43 68.38 43.41 70.96 35.18"
+                />
+                <polyline
+                  className="arrow-right"
+                  points="100.21 44.66 108.43 42.08 108.43 42.06 105.85 33.84"
+                />
+              </g>
+            </svg>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
       <MobileMenu isBlackMenu={true} lang={lng} />
-      <main className="relative z-[11] min-h-[calc(100dvh)] bg-yellow pt-[90px] lg:h-[calc(100dvh)]  lg:overflow-hidden lg:bg-transparent lg:pt-0 xl:ml-[450px] xl:mr-[162px] 2xl:mr-[232px]">
+      <main className="relative z-[11] min-h-[calc(100dvh)] bg-yellow pt-[90px] lg:h-[calc(100dvh)]  lg:overflow-hidden lg:bg-transparent lg:pt-0 xl:ml-[276px] xl:mr-[162px] 2xl:mr-[232px] 2xl:ml-[400px]">
         <div className="flex h-full w-full flex-col justify-between lg:flex-row">
           <div className="flex h-full flex-col lg:w-[40%]">
             <motion.div
@@ -67,8 +109,8 @@ export default function Services({
                     </p>
                   </SplideSlide>
                 </SplideTrack>
-                <div className="mt-12 flex">
-                  <div className="splide__arrows ml-auto !hidden lg:block">
+                <div className="mt-24 flex xxl:mt-28">
+                  <div className="splide__arrows ml-20 !hidden lg:!block">
                     <button className="splide__arrow splide__arrow--prev mr-4">
                       <svg
                         width="26"
@@ -115,14 +157,14 @@ export default function Services({
                 }}
               >
                 <SplideSlide>
-                  <h2 className="relative text-center text-[64px] font-bold uppercase lg:text-left">
+                  <h2 className="relative mb-8 text-center text-[64px] font-bold uppercase lg:mb-0 lg:text-left">
                     <span className="absolute left-10 top-5 text-lg font-bold lg:hidden">
                       01
                     </span>
                     WEB
                   </h2>
                   <ul
-                    className="servicesList text-lg lg:mt-20"
+                    className="servicesList text-lg uppercase lg:mt-20"
                     dangerouslySetInnerHTML={{
                       __html: t("services_web", {
                         interpolation: { escapeValue: false },
@@ -131,7 +173,7 @@ export default function Services({
                   ></ul>
                 </SplideSlide>
                 <SplideSlide>
-                  <h2 className="relative text-center text-[64px] font-bold uppercase lg:text-left">
+                  <h2 className="relative mb-8 text-center text-[64px] font-bold uppercase lg:mb-0 lg:text-left">
                     <span className="absolute left-10 top-5 text-lg font-bold lg:hidden">
                       02
                     </span>
@@ -147,7 +189,7 @@ export default function Services({
                   ></ul>
                 </SplideSlide>
                 <SplideSlide>
-                  <h2 className="relative text-center text-[64px] font-bold uppercase lg:text-left">
+                  <h2 className="relative mb-8 text-center text-[64px] font-bold uppercase lg:mb-0 lg:text-left">
                     <span className="absolute left-10 top-5 text-lg font-bold lg:hidden">
                       03
                     </span>
@@ -164,14 +206,14 @@ export default function Services({
                 </SplideSlide>
               </Splide>
 
-              <div className="">
+              <div className="xl:mt-6 xxl:mt-12">
                 <div
                   className={classNames(
-                    "mx-auto border border-black transition-all duration-500 lg:mx-0",
+                    "width:delay-500 mx-auto border border-black transition-all duration-500 lg:mx-0",
                     {
                       "h-[122px] w-[254px]":
                         activeSlideIndex === 0 || activeSlideIndex === 2,
-                      "mt-[-100px] h-[232px] w-[132px] lg:mt-0":
+                      "mt-[-110px] h-[232px] w-[132px] xxl:mt-[-115px]":
                         activeSlideIndex === 1,
                     }
                   )}

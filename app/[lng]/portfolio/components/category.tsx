@@ -31,16 +31,16 @@ export const Category = ({
     }, 500);
   };
   return (
-    <main className="relative z-[11] h-[calc(100dvh)] bg-white pt-[90px] lg:ml-[142px] lg:bg-transparent lg:pt-0  xl:ml-[196px] xl:mr-[162px] 2xl:mr-[232px]">
+    <main className="relative z-[11] h-[calc(100dvh)] bg-white pt-[90px] lg:ml-[142px] lg:bg-transparent lg:pt-0  xl:ml-[196px] xl:mr-[162px] xxl:mr-[166px] 2xl:mr-[232px]">
       <div className="flex h-full w-full flex-col lg:flex-row">
         <div className="flex h-full flex-col lg:w-[40%] lg:justify-center">
           <PageTitle
-            extraWrapperClass="uppercase"
+            extraWrapperClass="uppercase mb-4 lg:mb-0"
             text={activeCategory.name[lang]}
             absolute="true"
           />
-          <div className="lg:pt-36 xxl:pt-0">
-            <div className="scrollbar-hide ml-8 flex overflow-y-auto lg:ml-0 lg:block">
+          <div className="lg:pt-40 xxl:pt-0">
+            <div className="scrollbar-hide ml-8 mb-2 flex overflow-y-auto lg:ml-0 lg:mb-0 lg:block">
               {activeCategory.cases
                 ? activeCategory.cases.map((item, index) => (
                     <motion.nav
@@ -55,7 +55,7 @@ export const Category = ({
                       className="mr-4 flex bg-black lg:mr-0 lg:w-full lg:bg-transparent "
                     >
                       <button
-                        className="relative w-full py-2 px-2 text-left  text-lg font-medium uppercase transition duration-300 "
+                        className="relative w-full px-2 text-left text-lg  font-medium uppercase transition duration-300 lg:py-2 "
                         onClick={() => {
                           setActiveCase(item);
                           calculateHeight();
@@ -83,7 +83,7 @@ export const Category = ({
                           {item.name[lang]}
                         </span>
                         <span
-                          className="relative z-10 flex h-full  items-center whitespace-nowrap py-2 px-2 text-white lg:hidden"
+                          className="relative z-10 flex h-full  items-center whitespace-nowrap py-1 px-2 text-white lg:hidden lg:py-2"
                           style={{
                             color:
                               activeCase?.name === item.name
@@ -98,17 +98,11 @@ export const Category = ({
                   ))
                 : null}
             </div>
-            <button
-              className="mt-8 self-start border border-black bg-black px-4 py-2 text-white transition duration-300 hover:bg-transparent hover:text-black"
-              onClick={() => setActiveCategory(null)}
-            >
-              Wróć
-            </button>
           </div>
         </div>
         <div
           id="useCaseWrapper"
-          className="lg:shrink-1 relative mt-4 flex h-full shrink-0 overflow-y-auto lg:mt-0 lg:w-[60%]"
+          className="lg:shrink-1 style-4 relative mt-4 flex h-full shrink-0 overflow-y-auto lg:mt-0 lg:w-[60%]"
         >
           {activeCase ? (
             <Image
@@ -119,7 +113,7 @@ export const Category = ({
               width={activeWidth}
               height={activeHeight}
               quality={100}
-              className="h-max w-full overflow-y-auto"
+              className="h-max w-full overflow-y-auto "
               unoptimized={true}
               loading={"lazy"}
             />

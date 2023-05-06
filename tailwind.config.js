@@ -20,6 +20,7 @@ module.exports = {
         white: "#FFFEFD",
         yellow: "#FFAC30",
         blue: "#64BCFF",
+        gray: "#B0B0B0",
       },
       margin: {
         18: "4.5rem",

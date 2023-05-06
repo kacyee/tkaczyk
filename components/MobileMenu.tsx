@@ -6,15 +6,20 @@ import { AppContextState, AppContext } from "@/app/context/AppContext";
 import MobileMenuItems from "./MobileMenuItems";
 import classNames from "classnames";
 import { useTranslation } from "@/app/i18n/client";
+import { UseCase } from "@/data/IUseCase";
 
 const MobileMenu = ({
   setShowText,
   isBlackMenu = false,
   lang,
+  setActiveCategory,
+  activeCategory,
 }: {
   setShowText?: Dispatch<SetStateAction<boolean>>;
   isBlackMenu?: boolean;
   lang: string;
+  setActiveCategory?: Dispatch<SetStateAction<UseCase | null>>;
+  activeCategory?: UseCase | null;
 }) => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState<boolean>(false);
   const { setActivePage } = useContext<AppContextState>(AppContext);
@@ -31,12 +36,23 @@ const MobileMenu = ({
       ) : null}
       <div className="absolute top-[16px] z-[1001]  flex w-full items-center justify-center px-4 lg:hidden">
         <div className={`w-1/4 ${isMobileMenuActive ? "opacity-0" : ""}`}>
-          <Image
-            src={!isBlackMenu ? "/images/logo.svg" : "/images/Logo-black.svg"}
-            width="67"
-            height="51"
-            alt="Logo Paweł Tkaczyk"
-          />
+          {!activeCategory ? (
+            <Image
+              src={
+                !isBlackMenu ? "/images/logo.svg" : "/images/Logo-black-1.png"
+              }
+              width={67}
+              height={51}
+              alt="Logo Paweł Tkaczyk"
+            />
+          ) : (
+            <button
+              onClick={() => setActiveCategory!(null)}
+              className="ml-4 py-4 font-bold uppercase"
+            >
+              {t("go_back")}
+            </button>
+          )}
         </div>
         {setShowText ? (
           <button

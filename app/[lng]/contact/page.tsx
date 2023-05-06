@@ -43,15 +43,20 @@ export default function Contact({
   return (
     <>
       <MobileMenu isBlackMenu={true} lang={lng} />
-      <main className="relative z-[11] min-h-[calc(100dvh)] bg-blue pt-[90px] lg:h-[calc(100dvh)] lg:overflow-hidden lg:bg-transparent lg:pt-0  xl:ml-[346px] xl:mr-[90px] 2xl:ml-[788px] 2xl:mr-[459px]">
+      <main className="relative z-[11] min-h-[calc(100dvh)] bg-blue pt-[90px] lg:h-[calc(100dvh)] lg:overflow-hidden lg:bg-transparent lg:pt-0  xl:ml-[346px] xl:mr-[90px] 2xl:ml-[488px] 2xl:mr-[459px]">
         <div className="grid h-full lg:grid-cols-2">
-          <div className="flex flex-col border-r border-white px-4 uppercase lg:px-0">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ ease: "easeIn", duration: 0.2, delay: 0.4 }}
+            className="flex flex-col px-4 uppercase lg:border-r lg:border-white lg:px-0"
+          >
             <motion.div
               initial={{ translateX: -40, opacity: 0 }}
               animate={{ translateX: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 0.4, delay: 0.7 }}
             >
-              <h2 className="text-center text-[64px] font-bold text-black lg:text-left xl:mt-[175px] xl:mb-[70px] 2xl:mt-[394px]">
+              <h2 className=" text-center text-[64px] font-bold text-black lg:text-left xl:mt-[175px] xl:mb-[70px] 2xl:mt-[394px]">
                 {t("title")}
               </h2>
             </motion.div>
@@ -94,17 +99,17 @@ export default function Contact({
                 Dribble
               </a>
             </motion.nav>
-          </div>
-          <div className="flex flex-col  uppercase xl:pl-[70px] 2xl:pl-[230px]">
+          </motion.div>
+          <div className="flex flex-col  uppercase xl:pl-[70px] 2xl:pl-[142px]">
             <motion.div
               initial={{ translateX: -40, opacity: 0 }}
               animate={{ translateX: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 0.4, delay: 0.7 }}
-              className="lg:px0 px-4"
+              className="px-4 lg:px-0"
             >
-              <h2 className="mx-auto mt-[30px] w-max text-center text-[64px] font-bold leading-none text-white lg:mx-0 lg:text-left xl:mt-[175px] xl:mb-[70px] 2xl:mt-[394px]">
+              <h2 className="mx-auto mt-[40px] mb-[20px] w-max text-center text-[64px] font-bold leading-none text-white lg:mx-0 lg:mb-0 lg:text-left xl:mt-[175px] xl:mb-[70px] 2xl:mt-[394px]">
                 {t("send")}
-                <span className="block text-center text-[26px] lg:text-right">
+                <span className="mt-1 block text-center text-[26px] lg:text-right">
                   {t("question")}
                 </span>
               </h2>
@@ -119,13 +124,13 @@ export default function Contact({
                 <input
                   type="text"
                   name="user_name"
-                  className=" mt-4 mb-4 border-b border-white bg-transparent py-2 text-center uppercase text-white placeholder-white outline-none lg:mt-0 lg:text-left"
+                  className=" mt-4 mb-6 border-b border-white bg-transparent py-2 text-center uppercase text-white placeholder-white outline-none lg:mt-0 lg:text-left"
                   placeholder={t("first_name")!}
                 />
                 <input
                   type="email"
                   name="user_email"
-                  className="mb-4 border-b border-white bg-transparent py-2 text-center uppercase text-white placeholder-white outline-none lg:text-left"
+                  className="mb-6 border-b border-white bg-transparent py-2 text-center uppercase text-white placeholder-white outline-none lg:text-left"
                   placeholder="EMAIL"
                 />
                 <label className="mb-2 text-center text-white lg:text-left ">
@@ -133,12 +138,12 @@ export default function Contact({
                 </label>
                 <textarea
                   name="message"
-                  className="h-[90px] border border-white bg-transparent p-2 text-center text-white outline-none lg:text-left xl:h-[180px] 2xl:h-[250px]"
+                  className="h-[140px] border border-white bg-transparent p-2 text-center text-white outline-none lg:text-left xl:h-[180px] 2xl:h-[250px]"
                 />
                 <input
                   type="submit"
                   value={t("send")!}
-                  className="mt-4 w-full cursor-pointer border border-black bg-black px-6 py-2 text-lg text-white transition duration-300 hover:border-white hover:bg-transparent  hover:text-white lg:ml-auto lg:w-max"
+                  className="mt-6 w-full cursor-pointer border border-black bg-black px-6 py-2 text-lg uppercase text-white transition duration-300 hover:border-white hover:bg-transparent  hover:text-white lg:ml-auto lg:w-max"
                 />
               </form>
               {emailSent ? (
@@ -149,7 +154,7 @@ export default function Contact({
                 >
                   <div
                     id="toast-simple"
-                    className="space-x top-[30px] right-0 mt-4 flex w-full max-w-xs items-center space-x-4 divide-x divide-gray-200 rounded-lg bg-white p-4 text-gray-500 shadow dark:divide-gray-700 dark:text-black lg:absolute lg:mt-0"
+                    className="space-x divide-gray-200 text-gray-500 dark:divide-gray-700 top-[30px] right-0 mt-4 flex w-full max-w-xs items-center space-x-4 divide-x rounded-lg bg-white p-4 shadow dark:text-black lg:absolute lg:mt-0"
                     role="alert"
                   >
                     <svg
