@@ -260,3 +260,7 @@ li .splide__pagination__page.is-active {
 input:focus::placeholder {
   color: transparent;
 }
+
+input::placeholder {
+  transition: all 0.2s ease-in-out;
+}
