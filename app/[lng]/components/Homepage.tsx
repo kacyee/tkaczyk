@@ -58,7 +58,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
   return (
     <Delayed isShown={isShown}>
       <>
-        <MobileMenu setShowText={setShowText} lang={lang} />
+        <MobileMenu setShowText={setShowText} lang={lang} showText={showText} />
         <main
           ref={containerRef}
           className={classNames(
@@ -79,7 +79,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
               <button
                 onClick={() => setShowText(!showText)}
                 className={classNames(`h-fit text-xl uppercase text-white`, {
-                  "font-bold": !showText,
+                  "font-bold": showText,
                 })}
               >
                 {t("who_am_i")}
@@ -164,7 +164,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
           <section
             id="intro"
             className={classNames(
-              "intro mt-18 px-[35px] text-white opacity-0 transition duration-1000 sm:mt-32 lg:px-[0] lg:text-2xl xl:w-3/4 xl:pl-[110px] 2xl:pl-0",
+              "intro mt-24 px-[35px] text-white opacity-0 transition duration-1000 sm:mt-32 lg:px-[0] lg:text-2xl xl:w-3/4 xl:pl-[110px] 2xl:pl-0",
               {
                 "opacity-100": showText,
               }

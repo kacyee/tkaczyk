@@ -14,12 +14,14 @@ const MobileMenu = ({
   lang,
   setActiveCategory,
   activeCategory,
+  showText,
 }: {
   setShowText?: Dispatch<SetStateAction<boolean>>;
   isBlackMenu?: boolean;
   lang: string;
   setActiveCategory?: Dispatch<SetStateAction<UseCase | null>>;
   activeCategory?: UseCase | null;
+  showText?: boolean;
 }) => {
   const [isMobileMenuActive, setIsMobileMenuActive] = useState<boolean>(false);
   const { setActivePage } = useContext<AppContextState>(AppContext);
@@ -57,9 +59,10 @@ const MobileMenu = ({
         {setShowText ? (
           <button
             onClick={() => setShowText(true)}
-            className={`h-fit w-2/4 text-xl font-bold uppercase text-white ${
-              isMobileMenuActive ? "opacity-0" : ""
-            }`}
+            className={classNames(`h-fit w-2/4 text-xl uppercase text-white`, {
+              "opacity-0": isMobileMenuActive,
+              "font-bold": showText,
+            })}
           >
             {t("who_am_i")}
           </button>

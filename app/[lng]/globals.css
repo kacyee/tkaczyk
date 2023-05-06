@@ -220,12 +220,9 @@ li .splide__pagination__page.is-active {
 .hold-2,
 .line-horizontal,
 .line-rotate,
-.line-vertical,
-.notes,
-.tap-1,
-.tap-2 {
+.line-vertical {
   fill: transparent;
-  stroke: #000;
+  stroke: #ffac30;
   stroke-width: 3px;
   stroke-linecap: round;
   stroke-linejoin: round;
