@@ -196,7 +196,7 @@ export default function Services({
                     {t("others")}
                   </h2>
                   <ul
-                    className="servicesList text-lg lg:mt-20"
+                    className="servicesList text-lg uppercase lg:mt-20"
                     dangerouslySetInnerHTML={{
                       __html: t("services_others", {
                         interpolation: { escapeValue: false },
