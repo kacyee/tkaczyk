@@ -1,12 +1,17 @@
+type MultiLanguageField = {
+  en: string;
+  pl: string;
+};
+
 export type singleCase = {
-  name: { en: string; pl: string };
-  url: string;
+  name: MultiLanguageField;
+  url: MultiLanguageField;
   hoverBgColor: string;
   hoverFontColor: string;
 };
 
 export type UseCase = {
-  name: { en: string; pl: string };
+  name: MultiLanguageField;
   image: string;
   cases: singleCase[];
 };

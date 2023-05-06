@@ -41,14 +41,14 @@ export default function Services({
               setTimeout(() => setShowSwipe(false), 500);
             }}
             transition={{ ease: "easeInOut", duration: 0.5, delay: 1.3 }}
-            className="wrapper absolute z-[99999] h-full w-full overflow-hidden bg-[rgba(0,0,0,0.1)] lg:hidden"
+            className="wrapper absolute z-[99999] flex h-full w-full items-center justify-center overflow-hidden bg-[rgba(0,0,0,0.55)] lg:hidden"
           >
             <svg
               id="Swipe-horizontal_1"
               data-name="Swipe horizontal 1"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 200 200"
-              className="w-1/2 translate-y-3/4 translate-x-1/2"
+              className="w-1/2"
             >
               <path
                 className="hand-x"

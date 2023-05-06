@@ -106,7 +106,7 @@ export const Category = ({
         >
           {activeCase ? (
             <Image
-              src={activeCase.url}
+              src={activeCase.url[lang]}
               alt={activeCase.name[lang]}
               id={activeCase.name[lang]}
               ref={imageRef}
