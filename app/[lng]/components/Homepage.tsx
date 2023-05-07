@@ -207,6 +207,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
             </Link>
           </section>
         </main>
+        {!showText ? (
         <div className="absolute bottom-4 z-[11] grid w-full grid-cols-2 justify-between gap-8 px-8 text-xl text-white lg:hidden">
           <Link
             href={`/pl`}
@@ -225,6 +226,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
             EN
           </Link>
         </div>
+        ): null}
       </>
     </Delayed>
   );
