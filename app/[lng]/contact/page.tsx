@@ -126,12 +126,14 @@ export default function Contact({
                   name="user_name"
                   className="mt-4 mb-6 rounded-none border-b border-white bg-transparent py-2 text-center uppercase text-white placeholder-white outline-none lg:mt-0 lg:text-left"
                   placeholder={t("first_name")!}
+                  required
                 />
                 <input
                   type="email"
                   name="user_email"
                   className="mb-6 rounded-none border-b border-white bg-transparent py-2 text-center uppercase text-white placeholder-white outline-none lg:text-left"
                   placeholder="EMAIL"
+                  required
                 />
                 <label className="mb-2 text-center text-white lg:text-left ">
                   {t("message")}
@@ -139,6 +141,7 @@ export default function Contact({
                 <textarea
                   name="message"
                   className=" h-[140px] rounded-none border border-white bg-transparent p-2 text-center text-white outline-none lg:text-left xl:h-[180px] 2xl:h-[250px]"
+                  required
                 />
                 <input
                   type="submit"
