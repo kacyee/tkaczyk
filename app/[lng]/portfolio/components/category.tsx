@@ -4,6 +4,7 @@ import { UseCase, singleCase } from "@/data/IUseCase";
 import { motion } from "framer-motion";
 import { Dispatch, SetStateAction, useRef, useState } from "react";
 import Image from "next/image";
+import { useTranslation } from "@/app/i18n/client";
 type CategoryProps = {
   activeCategory: UseCase;
   setActiveCategory: Dispatch<SetStateAction<UseCase | null>>;
@@ -15,6 +16,8 @@ export const Category = ({
   setActiveCategory,
   lang,
 }: CategoryProps) => {
+  const { t } = useTranslation(lang, "menu");
+
   const [activeCase, setActiveCase] = useState<singleCase | null>(
     activeCategory.cases[0]
   );
@@ -97,6 +100,12 @@ export const Category = ({
                     </motion.nav>
                   ))
                 : null}
+              <button
+                onClick={() => setActiveCategory!(null)}
+                className="mt-32 hidden w-max border border-black bg-black py-2 px-6 uppercase text-white transition duration-300 hover:bg-white hover:text-black lg:block"
+              >
+                {t("go_back")}
+              </button>
             </div>
           </div>
         </div>

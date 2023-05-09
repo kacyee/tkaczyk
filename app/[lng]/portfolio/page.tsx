@@ -7,6 +7,7 @@ import PageTitle from "@/components/PageTitle";
 import { IUseCase, UseCase } from "@/data/IUseCase";
 import { Category } from "./components/category";
 import MobileMenu from "@/components/MobileMenu";
+import { useTranslation } from "@/app/i18n/client";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -20,6 +21,7 @@ export default function Page({
   const [hoveredItem, setHoveredItem] = useState<string>("");
   const [activeCategory, setActiveCategory] = useState<UseCase | null>(null);
   const { data, isLoading } = useSWR<IUseCase>("/api", fetcher);
+
   return (
     <>
       <MobileMenu
