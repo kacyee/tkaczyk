@@ -34,7 +34,7 @@ export const Category = ({
     }, 500);
   };
   return (
-    <main className="relative z-[11] h-[calc(100dvh)] bg-white pt-[90px] lg:ml-[142px] lg:bg-transparent lg:pt-0  xl:ml-[196px] xl:mr-[162px] xxl:mr-[166px] 2xl:mr-[232px]">
+    <main className="relative z-[11] h-[calc(100dvh)] bg-white pt-[90px] lg:ml-[142px] lg:mr-[157px] lg:bg-transparent  lg:pt-0 xl:ml-[196px] xl:mr-[162px] xxl:mr-[166px] 2xl:mr-[232px]">
       <div className="flex h-full w-full flex-col lg:flex-row">
         <div className="flex h-full flex-col lg:w-[40%] lg:justify-center">
           <PageTitle

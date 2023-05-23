@@ -164,7 +164,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
           <section
             id="intro"
             className={classNames(
-              "intro mt-24 px-[35px] text-white opacity-0 transition duration-1000 sm:mt-32 lg:px-[0] lg:text-2xl xl:w-3/4 xl:pl-[110px] 2xl:pl-0",
+              "intro mt-24 px-[35px] text-white opacity-0 transition duration-1000 sm:mt-32 lg:px-12 lg:text-2xl xl:w-3/4 xl:px-[0] xl:pl-[110px] 2xl:pl-0",
               {
                 "opacity-100": showText,
               }
@@ -179,7 +179,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
           <section
             id="big-heading"
             className={classNames(
-              "mt-8 px-[35px] text-[48px] tracking-tight opacity-0 transition delay-700 duration-1000 lg:px-0 lg:text-inherit xl:pl-[110px] xxl:mt-32 2xl:pl-0",
+              "mt-8 px-[35px] text-[48px] tracking-tight opacity-0 transition delay-700 duration-1000 lg:px-12 lg:text-inherit xl:px-0 xl:pl-[110px] xxl:mt-32 2xl:pl-0",
               {
                 "opacity-100": showText,
               }
@@ -208,25 +208,25 @@ export const Homepage = ({ lang }: { lang: string }) => {
           </section>
         </main>
         {!showText ? (
-        <div className="absolute bottom-4 z-[11] grid w-full grid-cols-2 justify-between gap-8 px-8 text-xl text-white lg:hidden">
-          <Link
-            href={`/pl`}
-            className={`${
-              lang === "pl" ? "bg-white text-black" : "bg-black text-white"
-            } border border-white py-1 text-center`}
-          >
-            PL{" "}
-          </Link>
-          <Link
-            href={`/en`}
-            className={`${
-              lang === "en" ? "bg-white text-black" : "bg-black text-white"
-            } border border-white py-1 text-center`}
-          >
-            EN
-          </Link>
-        </div>
-        ): null}
+          <div className="absolute bottom-4 z-[11] grid w-full grid-cols-2 justify-between gap-8 px-8 text-xl text-white lg:hidden">
+            <Link
+              href={`/pl`}
+              className={`${
+                lang === "pl" ? "bg-white text-black" : "bg-black text-white"
+              } border border-white py-1 text-center`}
+            >
+              PL{" "}
+            </Link>
+            <Link
+              href={`/en`}
+              className={`${
+                lang === "en" ? "bg-white text-black" : "bg-black text-white"
+              } border border-white py-1 text-center`}
+            >
+              EN
+            </Link>
+          </div>
+        ) : null}
       </>
     </Delayed>
   );

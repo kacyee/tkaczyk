@@ -31,7 +31,7 @@ export default function Page({
         activeCategory={activeCategory}
       />
       {!isLoading && data && !activeCategory ? (
-        <main className="relative z-[11] h-[calc(100dvh)] bg-white pt-[90px]  lg:ml-[142px] lg:bg-transparent lg:pt-0 xl:ml-[196px] xl:mr-[162px] xxl:mr-[166px] 2xl:mr-[245px]">
+        <main className="relative z-[11] h-[calc(100dvh)] bg-white pt-[90px]  lg:ml-[142px] lg:mr-[157px] lg:bg-transparent lg:pt-0 xl:ml-[196px] xl:mr-[162px] xxl:mr-[166px] 2xl:mr-[245px]">
           <div className="flex h-full w-full">
             <div className="flex h-full w-full flex-col lg:w-[40%] lg:justify-center">
               <PageTitle

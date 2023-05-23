@@ -12,8 +12,8 @@ const PageTitle = ({
   absolute = "false",
 }: PageTitleProps) => {
   const isAbsolute = {
-    true: "text-center lg:text-left lg:absolute lg:top-[172px] 2xl:top-[237px]",
-    false: "text-center lg:text-left lg:mt-[172px] 2xl:mt-[237px]",
+    true: "text-center lg:text-left lg:absolute lg:top-[80px] xl:top-[172px] 2xl:top-[237px]",
+    false: "text-center lg:text-left lg:mt-[80px] xl:mt-[172px] 2xl:mt-[237px]",
   };
   return (
     <motion.nav
@@ -22,7 +22,7 @@ const PageTitle = ({
       transition={{ ease: "easeInOut", duration: 1, delay: 0.3 }}
       className={`${isAbsolute[absolute]} ${extraWrapperClass}`}
     >
-      <h1 className="text-[64px] font-bold ">{text}</h1>
+      <h1 className="text-[48px] font-bold xl:text-[64px] ">{text}</h1>
     </motion.nav>
   );
 };
