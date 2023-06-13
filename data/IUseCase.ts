@@ -11,6 +11,7 @@ export type singleCase = {
 };
 
 export type UseCase = {
+  ID: string;
   name: MultiLanguageField;
   image: string;
   cases: singleCase[];

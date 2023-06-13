@@ -206,14 +206,14 @@ export default function Services({
                 </SplideSlide>
               </Splide>
 
-              <div className="xl:mt-6 xxl:mt-12">
+              <div className="mt-20 xl:mt-20 xxl:mt-[5.5rem]">
                 <div
                   className={classNames(
                     "width:delay-500 mx-auto border border-black transition-all duration-500 lg:mx-0",
                     {
                       "h-[122px] w-[254px]":
                         activeSlideIndex === 0 || activeSlideIndex === 2,
-                      "mt-[-110px] h-[232px] w-[132px] xxl:mt-[-80px]":
+                      "mt-[-110px] h-[232px] w-[132px] xxl:mt-[-115px]":
                         activeSlideIndex === 1,
                     }
                   )}

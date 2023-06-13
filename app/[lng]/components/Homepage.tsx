@@ -151,10 +151,19 @@ export const Homepage = ({ lang }: { lang: string }) => {
                   }}
                   getBeforeInit={(instance) => {
                     instance
-                      .type("omfg!")
+                      .type("omg!")
+                      .pause(300)
+                      .delete(4)
+                      .type("welcome to my world")
                       .pause(300)
                       .delete(5)
-                      .type("welcome to my site", { delay: 300 })
+                      .type("brain")
+                      .pause(300)
+                      .delete(5)
+                      .type("mind")
+                      .pause(300)
+                      .delete(4)
+                      .type("site")
                       .go();
                     return instance;
                   }}
@@ -180,7 +189,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
           <section
             id="big-heading"
             className={classNames(
-              "mt-8 px-[35px] text-[48px] tracking-tight opacity-0 transition delay-700 duration-1000 lg:px-12 lg:text-inherit xl:px-0 xl:pl-[110px] xxl:mt-32 2xl:pl-0",
+              "mt-8 px-[35px] text-[48px] tracking-tight opacity-0 transition delay-700 duration-1000 lg:px-12 lg:text-inherit xl:px-0 xl:pl-[110px] xxl:mt-20 2xl:pl-0",
               {
                 "opacity-100": showText,
               }

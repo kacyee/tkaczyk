@@ -8,6 +8,7 @@ import { IUseCase, UseCase } from "@/data/IUseCase";
 import { Category } from "./components/category";
 import MobileMenu from "@/components/MobileMenu";
 import { useTranslation } from "@/app/i18n/client";
+import { useRouter } from "next/navigation";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
@@ -21,6 +22,7 @@ export default function Page({
   const [hoveredItem, setHoveredItem] = useState<string>("");
   const [activeCategory, setActiveCategory] = useState<UseCase | null>(null);
   const { data, isLoading } = useSWR<IUseCase>("/api", fetcher);
+  const router = useRouter();
 
   return (
     <>
@@ -58,7 +60,13 @@ export default function Page({
                           setHoveredItem(item.name[lng as "pl" | "en"])
                         }
                         onMouseLeave={() => setHoveredItem("")}
-                        onClick={() => setActiveCategory(item)}
+                        onClick={() =>
+                          item.ID !== "others"
+                            ? setActiveCategory(item)
+                            : router.push(
+                                "https://www.behance.net/pawulontkaczyk"
+                              )
+                        }
                       >
                         {item.name[lng as "pl" | "en"]}
                       </button>
