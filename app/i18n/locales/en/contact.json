@@ -2,7 +2,7 @@
   "title": "Contact",
   "send": "Send",
   "question": "question",
-  "first_name": "First name",
+  "first_name": "Name",
   "message": "Message",
-  "message_sent": "Message sent!"
+  "message_sent": "Message sent. Thank you!"
 }

@@ -36,17 +36,18 @@ export const Homepage = ({ lang }: { lang: string }) => {
         WAVES({
           THREE,
           el: containerRef.current,
-          mouseControls: false,
-          touchControls: false,
+          mouseControls: true,
+          touchControls: true,
           gyroControls: false,
           minHeight: 200.0,
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0x90909,
-          shininess: 0.0,
-          waveHeight: 32.0,
-          zoom: 0.7,
+          color: 0x50505,
+          shininess: 8.0,
+          waveHeight: 16.0,
+          waveSpeed: 1.45,
+          zoom: 0.77,
         })
       );
     }

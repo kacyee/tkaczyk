@@ -1,7 +1,7 @@
 {
   "title": "Services",
-  "services_web": "<li>Web apps</li><li>WWW pages</li><li>Landing pages</li><li>E-commerce shops</li>",
-  "services_mobile": "<li>Apps for ANDROID</li><li>Apps for iOS</li>",
-  "services_others": " <li>Brand design</li><li>Product design</li><li>A-Z branding</li><li>Commercial materials</li><li>DTP</li>",
+  "services_web": "<li>Web app</li><li>Website</li><li>Landing page</li>",
+  "services_mobile": "<li>App for ANDROID</li><li>App for iOS</li><li>Hybrid App</li>",
+  "services_others": " <li>Brand design</li><li>E-commerce</li><li>Posters</li><li>DTP</li>",
   "others": "Others"
 }
