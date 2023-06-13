@@ -154,18 +154,18 @@ export const Homepage = ({ lang }: { lang: string }) => {
                       .type("omg!")
                       .pause(300)
                       .delete(4)
-                      .type("welcome to my brain", { delay: 300 })
+                      .type("welcome to my world", { delay: 300 })
                       .pause(600)
                       .delete(3)
                       .pause(200)
                       .delete(2)
-                      .type("world", { delay: 300 })
+                      .type("brain", { delay: 300 })
                       .pause(600)
                       .delete(5)
-                      .type("site", { delay: 300 })
+                      .type("mind", { delay: 300 })
                       .pause(600)
                       .delete(4)
-                      .type("mind", { delay: 300 })
+                      .type("site", { delay: 300 })
                       .go();
                     return instance;
                   }}
