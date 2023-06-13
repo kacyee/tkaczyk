@@ -151,6 +151,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
                   }}
                   getBeforeInit={(instance) => {
                     instance
+                      .type("omg!")
                       .pause(300)
                       .delete(4)
                       .type("welcome to my brain", { delay: 300 })
