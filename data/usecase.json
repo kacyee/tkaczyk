@@ -28,8 +28,8 @@
         {
           "name": { "en": "BloodHub", "pl": "BloodHub" },
           "url": {
-            "en": "/images/usecases/VitaLab.png",
-            "pl": "/images/usecases/VitaLab.png"
+            "en": "/images/usecases/BloodHub.png",
+            "pl": "/images/usecases/BloodHub.png"
           },
           "hoverBgColor": "#16C784",
           "hoverFontColor": "#FFF"
