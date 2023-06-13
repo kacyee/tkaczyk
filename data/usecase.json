@@ -53,7 +53,7 @@
     },
     {
       "name": { "en": "Non-commercial", "pl": "Prace niekomercyjne" },
-      "image": "/images/inne.png",
+      "image": "/images/INNE.png",
       "cases": [
         {
           "name": { "en": "Connect Trans", "pl": "Connect Trans" },
