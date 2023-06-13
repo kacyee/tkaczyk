@@ -151,19 +151,20 @@ export const Homepage = ({ lang }: { lang: string }) => {
                   }}
                   getBeforeInit={(instance) => {
                     instance
-                      .type("omg!")
                       .pause(300)
                       .delete(4)
-                      .type("welcome to my world")
-                      .pause(300)
+                      .type("welcome to my brain", { delay: 300 })
+                      .pause(600)
+                      .delete(3)
+                      .pause(200)
+                      .delete(2)
+                      .type("world", { delay: 300 })
+                      .pause(600)
                       .delete(5)
-                      .type("brain")
-                      .pause(300)
-                      .delete(5)
-                      .type("mind")
-                      .pause(300)
+                      .type("site", { delay: 300 })
+                      .pause(600)
                       .delete(4)
-                      .type("site")
+                      .type("mind", { delay: 300 })
                       .go();
                     return instance;
                   }}
