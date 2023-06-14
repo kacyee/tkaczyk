@@ -63,7 +63,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
         <main
           ref={containerRef}
           className={classNames(
-            `absolute z-[11] h-[calc(100dvh)] select-none overflow-hidden opacity-0 transition-[opacity] duration-300 lg:w-[calc(100vw-18rem)] xl:pl-5 xl:pr-16 xl:pt-8 2xl:w-[calc(100vw-426px)] 2xl:pl-[240px] 2xl:pt-[80px] 2xl:pr-24`,
+            `absolute z-[11] h-[calc(100dvh)] select-none opacity-0 transition-[opacity] duration-300 lg:w-[calc(100vw-18rem)] lg:overflow-hidden xl:pl-5 xl:pr-16 xl:pt-8 2xl:w-[calc(100vw-426px)] 2xl:pl-[240px] 2xl:pt-[80px] 2xl:pr-24`,
             {
               "opacity-100": activePage === "/",
             }
@@ -128,7 +128,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
                     .type("TKACZYK", { delay: 300 })
                     .move(-4)
                     .delete(1)
-                    .type("4")
+                    .type("ߤ")
                     .move(null, { to: "END" })
                     .pause(500)
                     .go();
@@ -214,7 +214,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
                 height={20}
                 src="/images/golden-arrow.png"
                 alt="golden arrow"
-                className="ml-auto mt-4 lg:hidden"
+                className="ml-auto mt-4 pb-8 lg:hidden lg:pb-0"
               />
             </Link>
           </section>

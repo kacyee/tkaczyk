@@ -58,7 +58,7 @@ const MobileMenu = ({
         </div>
         {setShowText ? (
           <button
-            onClick={() => setShowText(true)}
+            onClick={() => setShowText(!showText)}
             className={classNames(`h-fit w-2/4 text-xl uppercase text-white`, {
               "opacity-0": isMobileMenuActive,
               "font-bold": showText,

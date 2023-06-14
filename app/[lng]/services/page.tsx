@@ -206,7 +206,7 @@ export default function Services({
                 </SplideSlide>
               </Splide>
 
-              <div className="mt-20 xl:mt-20 xxl:mt-[5.5rem]">
+              <div className="mt-20 xl:mt-20 xxl:mt-[5.5rem] 2xl:mt-36">
                 <div
                   className={classNames(
                     "width:delay-500 mx-auto border border-black transition-all duration-500 lg:mx-0",
