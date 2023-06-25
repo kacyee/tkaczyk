@@ -79,9 +79,12 @@ export const Homepage = ({ lang }: { lang: string }) => {
             <div className="flex">
               <button
                 onClick={() => setShowText(!showText)}
-                className={classNames(`h-fit text-xl uppercase text-white`, {
-                  "font-bold": showText,
-                })}
+                className={classNames(
+                  `h-fit text-xl font-medium uppercase text-gray`,
+                  {
+                    "font-bold text-white": showText,
+                  }
+                )}
               >
                 {t("who_am_i")}
               </button>
@@ -111,7 +114,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
               }
             )}
           >
-            <h1 className="flex flex-col text-center text-[2rem] leading-none text-white lg:mt-[-130px] lg:text-[7.5rem]">
+            <h1 className="flex flex-col text-center text-[2rem] font-semibold leading-none text-white lg:mt-[-130px] lg:text-[72px]">
               <TypeIt
                 options={{
                   afterComplete: (instance: any) => {
@@ -128,7 +131,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
                     .type("TKACZYK", { delay: 300 })
                     .move(-4)
                     .delete(1)
-                    .type("ߤ")
+                    .type("4", { delay: 300 })
                     .move(null, { to: "END" })
                     .pause(500)
                     .go();
@@ -137,7 +140,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
               />
               <p
                 className={classNames(
-                  "text-[1.5rem] tracking-normal text-yellow",
+                  "mt-2 text-[1.5rem] tracking-normal text-yellow",
                   {
                     block: titleFinished,
                     hidden: !titleFinished,
@@ -176,7 +179,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
           <section
             id="intro"
             className={classNames(
-              "intro mt-24 px-[35px] text-white opacity-0 transition duration-1000 sm:mt-32 lg:px-12 lg:text-2xl xl:w-3/4 xl:px-[0] xl:pl-[110px] 2xl:pl-0",
+              "intro mt-24 px-[35px] text-white opacity-0 transition duration-1000 sm:mt-32 lg:px-12 lg:text-[20px] lg:leading-[32px] xl:w-3/4 xl:px-[0] xl:pl-[110px] 2xl:pl-0",
               {
                 "opacity-100": showText,
               }
@@ -202,7 +205,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
               onClick={() => setActivePage(routes.SERVICES)}
             >
               <h2
-                className="leading-none text-yellow xl:mt-12 xl:text-[120px] xxl:leading-tight"
+                className="leading-none text-yellow xl:mt-12 xl:text-[72px] xxl:leading-tight"
                 dangerouslySetInnerHTML={{
                   __html: t("who_am_i_look", {
                     interpolation: { escapeValue: false },
