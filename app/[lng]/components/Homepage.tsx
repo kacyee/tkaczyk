@@ -226,7 +226,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
               href={`/pl`}
               className={`${
                 lang === "pl" ? "bg-white text-black" : "bg-black text-white"
-              } border border-white py-1 text-center`}
+              } border border-white py-1 text-center font-medium`}
             >
               PL{" "}
             </Link>
@@ -234,7 +234,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
               href={`/en`}
               className={`${
                 lang === "en" ? "bg-white text-black" : "bg-black text-white"
-              } border border-white py-1 text-center`}
+              } border border-white py-1 text-center font-medium`}
             >
               EN
             </Link>

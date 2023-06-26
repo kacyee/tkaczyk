@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "Urwdin";
-  src: url("/font/URWDIN-Regular.otf");
+  src: url("/font/URWDIN-Medium.ttf");
   font-weight: 400;
   font-style: normal;
 }
@@ -27,13 +27,13 @@
 }
 @font-face {
   font-family: "Urwdin";
-  src: url("/font/URWDIN-Medium.otf");
+  src: url("/font/URWDIN-Medium.ttf");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Urwdin";
-  src: url("/font/URWDIN-Bold.otf");
+  src: url("/font/URWDIN-Demi.ttf");
   font-weight: 600;
   font-style: normal;
 }
