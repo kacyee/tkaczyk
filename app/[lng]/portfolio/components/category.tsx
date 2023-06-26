@@ -126,7 +126,7 @@ export const Category = ({
               blurDataURL="/images/loading1.gif"
               className="h-max w-full overflow-y-auto "
               unoptimized={true}
-              loading={"lazy"}
+              priority={true}
             />
           ) : null}
         </div>
