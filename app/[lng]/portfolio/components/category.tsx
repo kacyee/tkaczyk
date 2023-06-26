@@ -114,20 +114,31 @@ export const Category = ({
           className="lg:shrink-1 style-4 relative mt-4 flex h-full shrink-0 overflow-y-auto lg:mt-0 lg:w-[60%]"
         >
           {activeCase ? (
-            <Image
-              src={activeCase.url[lang]}
-              alt={activeCase.name[lang]}
-              id={activeCase.name[lang]}
-              ref={imageRef}
-              width={activeWidth}
-              height={activeHeight}
-              quality={100}
-              placeholder="blur"
-              blurDataURL="/images/loading1.gif"
-              className="h-max w-full overflow-y-auto "
-              unoptimized={true}
-              priority={true}
-            />
+            <picture>
+              <source
+                srcSet={activeCase.url.mobile[lang]}
+                media="(max-width:1024px)"
+              />
+              <source
+                srcSet={activeCase.url.fullhd[lang]}
+                media="(min-width:1955px)"
+              />
+              <Image
+                src={activeCase.url.desktop[lang]}
+                alt={activeCase.name[lang]}
+                id={activeCase.name[lang]}
+                ref={imageRef}
+                width={activeWidth}
+                height={activeHeight}
+                style={{ width: "auto" }}
+                quality={100}
+                placeholder="blur"
+                blurDataURL="/images/loading1.gif"
+                className="h-max w-full overflow-y-auto "
+                unoptimized={true}
+                priority={true}
+              />
+            </picture>
           ) : null}
         </div>
       </div>

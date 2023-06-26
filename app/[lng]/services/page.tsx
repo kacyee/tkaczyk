@@ -88,7 +88,12 @@ export default function Services({
               <Splide
                 ref={splideRef}
                 hasTrack={false}
-                options={{ pagination: true, speed: 1000, wheel: true }}
+                options={{
+                  pagination: true,
+                  speed: 1000,
+                  wheel: true,
+                  type: "loop",
+                }}
                 onMove={(e) => setActiveSlideIndex(e.index)}
                 className="hidden lg:block"
               >

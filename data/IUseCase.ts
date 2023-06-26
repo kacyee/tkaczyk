@@ -3,9 +3,15 @@ type MultiLanguageField = {
   pl: string;
 };
 
+export type ResponsiveUrl = {
+  mobile: MultiLanguageField;
+  desktop: MultiLanguageField;
+  fullhd: MultiLanguageField;
+};
+
 export type singleCase = {
   name: MultiLanguageField;
-  url: MultiLanguageField;
+  url: ResponsiveUrl;
   hoverBgColor: string;
   hoverFontColor: string;
 };
