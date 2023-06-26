@@ -183,9 +183,11 @@ export const Homepage = ({ lang }: { lang: string }) => {
               }
             )}
           >
-            <p className="mb-6 font-bold">{t("who_am_i_heading")}</p>
-            <p className="mb-6 font-bold">{t("who_am_i_first_description")} </p>
-            <p className="font-bold xl:hidden 2xl:block">
+            <p className="mb-6 font-medium">{t("who_am_i_heading")}</p>
+            <p className="mb-6 font-medium">
+              {t("who_am_i_first_description")}{" "}
+            </p>
+            <p className="font-medium xl:hidden 2xl:block">
               {t("who_am_i_second_description")}
             </p>
           </section>
