@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import MobileMenu from "@/components/MobileMenu";
-import { t } from "i18next";
 import { useTranslation } from "@/app/i18n/client";
 
 export default function Contact({
@@ -68,7 +67,7 @@ export default function Contact({
             >
               <a
                 href="mailto:paweltkaczyk.design@gmail.com"
-                className=" font-semibold transition duration-300 hover:text-white"
+                className=" font-medium transition duration-300 hover:text-white"
               >
                 paweltkaczyk.design@gmail.com
               </a>
@@ -80,7 +79,7 @@ export default function Contact({
               className="mt-[30px] text-center text-lg lg:text-left"
             >
               <a
-                className=" text-lg font-semibold transition duration-300 hover:text-white"
+                className=" text-lg font-medium transition duration-300 hover:text-white"
                 href="https://www.behance.net/pawulontkaczyk"
               >
                 Behance
@@ -93,7 +92,7 @@ export default function Contact({
               className="mt-[30px] text-center text-lg lg:text-left"
             >
               <a
-                className="mt-[30px] text-lg font-semibold transition duration-300 hover:text-white"
+                className="mt-[30px] text-lg font-medium transition duration-300 hover:text-white"
                 href="https://dribble.com"
               >
                 Dribble
@@ -124,29 +123,29 @@ export default function Contact({
                 <input
                   type="text"
                   name="user_name"
-                  className="mt-4 mb-6 rounded-none border-b border-white bg-transparent py-2 text-center uppercase text-white placeholder-white outline-none lg:mt-0 lg:text-left"
+                  className="mt-4 mb-6 rounded-none border-b border-white bg-transparent py-2 text-center font-medium uppercase text-white placeholder-white outline-none lg:mt-0 lg:text-left"
                   placeholder={t("first_name")!}
                   required
                 />
                 <input
                   type="email"
                   name="user_email"
-                  className="mb-6 rounded-none border-b border-white bg-transparent py-2 text-center uppercase text-white placeholder-white outline-none lg:text-left"
+                  className="mb-6 rounded-none border-b border-white bg-transparent py-2 text-center font-medium uppercase text-white placeholder-white outline-none lg:text-left"
                   placeholder="EMAIL"
                   required
                 />
-                <label className="mb-2 text-center text-white lg:text-left ">
+                <label className="mb-2 text-center font-medium text-white lg:text-left">
                   {t("message")}
                 </label>
                 <textarea
                   name="message"
-                  className=" h-[140px] rounded-none border border-white bg-transparent p-2 text-center text-white outline-none lg:text-left xl:h-[180px] 2xl:h-[250px]"
+                  className=" h-[140px]  rounded-none border border-white bg-transparent p-2 text-center font-medium text-white outline-none lg:text-left xl:h-[180px] 2xl:h-[250px]"
                   required
                 />
                 <input
                   type="submit"
                   value={t("send")!}
-                  className=" mt-6 w-full cursor-pointer rounded-none border border-black bg-black px-6 py-2 text-lg uppercase text-white transition duration-300 hover:border-white hover:bg-transparent  hover:text-white lg:ml-auto lg:w-max"
+                  className=" mt-6 w-full cursor-pointer rounded-none border border-black bg-black px-6 py-2 text-lg font-medium uppercase text-white transition duration-300 hover:border-white hover:bg-transparent  hover:text-white lg:ml-auto lg:w-max"
                 />
               </form>
               {emailSent ? (

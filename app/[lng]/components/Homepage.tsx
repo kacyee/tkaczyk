@@ -79,12 +79,10 @@ export const Homepage = ({ lang }: { lang: string }) => {
             <div className="flex">
               <button
                 onClick={() => setShowText(!showText)}
-                className={classNames(
-                  `h-fit text-xl font-medium uppercase text-gray`,
-                  {
-                    "font-bold text-white": showText,
-                  }
-                )}
+                className={classNames(`h-fit text-xl uppercase`, {
+                  "font-bold text-white": showText,
+                  "font-medium text-gray": !showText,
+                })}
               >
                 {t("who_am_i")}
               </button>
@@ -114,7 +112,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
               }
             )}
           >
-            <h1 className="flex flex-col text-center text-[2rem] font-semibold leading-none text-white lg:mt-[-130px] lg:text-[72px]">
+            <h1 className="flex flex-col text-center text-[2rem] font-bold leading-none text-white lg:mt-[-130px] lg:text-[64px]">
               <TypeIt
                 options={{
                   afterComplete: (instance: any) => {
@@ -140,7 +138,7 @@ export const Homepage = ({ lang }: { lang: string }) => {
               />
               <p
                 className={classNames(
-                  "mt-2 text-[1.5rem] tracking-normal text-yellow",
+                  "mt-2 text-xl font-medium tracking-normal text-yellow",
                   {
                     block: titleFinished,
                     hidden: !titleFinished,
@@ -185,16 +183,16 @@ export const Homepage = ({ lang }: { lang: string }) => {
               }
             )}
           >
-            <p className="mb-6">{t("who_am_i_heading")}</p>
-            <p className="mb-6">{t("who_am_i_first_description")} </p>
-            <p className="xl:hidden 2xl:block">
+            <p className="mb-6 font-bold">{t("who_am_i_heading")}</p>
+            <p className="mb-6 font-bold">{t("who_am_i_first_description")} </p>
+            <p className="xl:hidden 2xl:block ">
               {t("who_am_i_second_description")}
             </p>
           </section>
           <section
             id="big-heading"
             className={classNames(
-              "mt-8 px-[35px] text-[48px] tracking-tight opacity-0 transition delay-700 duration-1000 lg:px-12 lg:text-inherit xl:px-0 xl:pl-[110px] xxl:mt-20 2xl:pl-0",
+              "mt-8 px-[35px] text-[48px] font-bold tracking-tight opacity-0 transition delay-700 duration-1000 lg:px-12 lg:text-inherit xl:px-0 xl:pl-[110px] xxl:mt-20 2xl:pl-0",
               {
                 "opacity-100": showText,
               }

@@ -27,13 +27,13 @@
 }
 @font-face {
   font-family: "Urwdin";
-  src: url("/font/URWDIN-Medium.ttf");
+  src: url("/font/URWDIN-Medium.otf");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Urwdin";
-  src: url("/font/URWDIN-Bold.ttf");
+  src: url("/font/URWDIN-Bold.otf");
   font-weight: 600;
   font-style: normal;
 }
@@ -84,7 +84,7 @@ li .splide__pagination__page.is-active {
 
 @media screen and (min-width: 1024px) {
   .servicesList {
-    list-style: square;
+    list-style: disc;
     margin-left: 1.5rem;
   }
 }
