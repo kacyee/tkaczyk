@@ -9,16 +9,16 @@
           "name": { "en": "MONEVIA", "pl": "MONEVIA" },
           "url": {
             "mobile": {
-              "en": "/images/usecases/MoneviaCS_1440_2x.png",
-              "pl": "/images/usecases/MoneviaCS_1440_2x.png"
+              "en": "/images/usecases/MoneviaCS_1440.png",
+              "pl": "/images/usecases/MoneviaCS_1440.png"
             },
             "desktop": {
-              "en": "/images/usecases/MoneviaCS_1440_2x.png",
-              "pl": "/images/usecases/MoneviaCS_1440_2x.png"
+              "en": "/images/usecases/MoneviaCS_1440.png",
+              "pl": "/images/usecases/MoneviaCS_1440.png"
             },
             "fullhd": {
-              "en": "/images/usecases/MoneviaCS_1440_2x.png",
-              "pl": "/images/usecases/MoneviaCS_1440_2x.png"
+              "en": "/images/usecases/MoneviaCS_1440.png",
+              "pl": "/images/usecases/MoneviaCS_1440.png"
             }
           },
           "hoverBgColor": "#ED1A3B",
@@ -39,12 +39,34 @@
               "pl": "/images/usecases/dcoin_build.png"
             },
             "fullhd": {
-              "en": "/images/usecases/dcoin_build.png",
-              "pl": "/images/usecases/dcoin_build.png"
+              "en": "/images/usecases/D-coin_4k.png",
+              "pl": "/images/usecases/D-coin_4k.png"
             }
           },
           "hoverBgColor": "#1A69FA",
           "hoverFontColor": "#FFF"
+        },
+        {
+          "name": {
+            "pl": "mObywatel",
+            "en": "mObywatel"
+          },
+          "url": {
+            "mobile": {
+              "en": "/images/usecases/mobywatel.png",
+              "pl": "/images/usecases/mobywatel.png"
+            },
+            "desktop": {
+              "en": "/images/usecases/mobywatel.png",
+              "pl": "/images/usecases/mobywatel.png"
+            },
+            "fullhd": {
+              "en": "/images/usecases/mobywatel.png",
+              "pl": "/images/usecases/mobywatel.png"
+            }
+          },
+          "hoverBgColor": "#DDEBF9",
+          "hoverFontColor": "#000"
         },
         {
           "name": { "en": "BloodHub", "pl": "BloodHub" },

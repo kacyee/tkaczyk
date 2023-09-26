@@ -13,7 +13,7 @@ const PageTitle = ({
 }: PageTitleProps) => {
   const isAbsolute = {
     true: "text-center lg:text-left lg:absolute lg:top-[80px] xl:top-[172px] 2xl:top-[237px]",
-    false: "text-center lg:text-left lg:mt-[80px] xl:mt-[172px] 2xl:mt-[237px]",
+    false: "text-center lg:text-left lg:mt-[80px] xl:mt-[0px]",
   };
   return (
     <motion.nav

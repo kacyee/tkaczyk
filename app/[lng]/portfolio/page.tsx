@@ -35,7 +35,7 @@ export default function Page({
               <PageTitle
                 extraWrapperClass="uppercase mb-12 lg:mb-0"
                 text="Portfolio"
-                absolute="true"
+                absolute="false"
               />
               {data.useCases
                 ? data.useCases.map((item, index) => (

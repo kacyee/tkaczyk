@@ -40,7 +40,7 @@ export const Category = ({
           <PageTitle
             extraWrapperClass="uppercase mb-4 lg:mb-0"
             text={activeCategory.name[lang]}
-            absolute="true"
+            absolute="false"
           />
           <div className="lg:pt-40 xxl:pt-0">
             <div className="scrollbar-hide ml-8 mb-2 flex overflow-y-auto lg:ml-0 lg:mb-0 lg:block">
@@ -125,6 +125,7 @@ export const Category = ({
               />
               <Image
                 src={activeCase.url.desktop[lang]}
+                sizes=""
                 alt={activeCase.name[lang]}
                 id={activeCase.name[lang]}
                 ref={imageRef}
