@@ -3,5 +3,5 @@
   "who_am_i_heading": "Hi!",
   "who_am_i_first_description": "My name is Pawel Tkaczyk. I am a designer who has been professionally specializing in mobile application and website development for over 10 years. My skills include both raster and vector graphics. In addition, I have experience in managing development teams in the implementation of web and cross-platform (iOS/Android) projects.",
   "who_am_i_second_description": "For the past year, I have had the pleasure of working at the Central Informatics Center as a Senior UX/UI Designer on projects such as ePayments and the mObywatel 2.0 application. I welcome challenges, creating and implementing my own ideas, proven methods or improving already implemented solutions.",
-  "who_am_i_look": "See what<span className='block lg:hidden'></span>I can<br/><span className='hidden xl:block'></span> do for You."
+  "who_am_i_look": "See what <span className='block lg:hidden'></span>I can<br/><span className='hidden xl:block'></span> do for You."
 }
