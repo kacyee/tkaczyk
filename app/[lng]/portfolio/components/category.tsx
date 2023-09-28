@@ -24,6 +24,7 @@ export const Category = ({
   const imageRef = useRef<HTMLImageElement>(null);
   const [activeHeight, setActiveHeight] = useState<number>(0);
   const [activeWidth, setActiveWidth] = useState<number>(0);
+  const imageDivRef = useRef<HTMLDivElement>(null);
 
   const calculateHeight = () => {
     setTimeout(() => {
@@ -38,7 +39,7 @@ export const Category = ({
       <div className="flex h-full w-full flex-col lg:flex-row">
         <div className="flex h-full flex-col lg:w-[40%] ">
           <PageTitle
-            extraWrapperClass="uppercase mb-12"
+            extraWrapperClass="uppercase mb-[80px]"
             text={activeCategory.name[lang]}
             absolute="false"
           />
@@ -62,6 +63,7 @@ export const Category = ({
                         onClick={() => {
                           setActiveCase(item);
                           calculateHeight();
+                          imageDivRef.current?.scroll({ top: 0 });
                         }}
                       >
                         <div
@@ -112,6 +114,7 @@ export const Category = ({
         <div
           id="useCaseWrapper"
           className="lg:shrink-1 style-4 relative mt-4 flex h-full shrink-0 overflow-y-auto lg:mt-0 lg:w-[60%]"
+          ref={imageDivRef}
         >
           {activeCase ? (
             <picture className="w-full">

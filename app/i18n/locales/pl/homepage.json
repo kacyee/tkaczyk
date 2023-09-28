@@ -3,5 +3,5 @@
   "who_am_i_heading": "Cześć!",
   "who_am_i_first_description": "Nazywam się Paweł Tkaczyk. Jestem projektantem, który przez ponad 10 lat zawodowo specjalizuje się w tworzeniu aplikacji mobilnych i stron internetowych. Moje umiejętności obejmują zarówno grafikę rastrową, jak i wektorową. Ponadto, mam doświadczenie w zarządzaniu zespołami programistycznymi przy implementacji projektów internetowych oraz cross-platformowych (iOS/Android).",
   "who_am_i_second_description": "Przez ostatni rok mam przyjemność pracować w Centralnym Ośrodku Informatyki  jako Senior UX/UI Designer przy projektach takich jak ePłatności czy aplikacja mObywatel 2.0. Z przyjemnością przyjmuję wyzwania, tworząc i implementując własne pomysły, sprawdzone metody lub udoskonalając zaimplementowane już rozwiązania.",
-  "who_am_i_look": "Zobacz, co<span className='block lg:hidden'></span> mogę<br/><span className='hidden xl:block'></span> dla Ciebie zrobić."
+  "who_am_i_look": "Zobacz, co<span className='block lg:hidden'></span> <span className='hidden xl:block'></span> dla Ciebie zrobić."
 }

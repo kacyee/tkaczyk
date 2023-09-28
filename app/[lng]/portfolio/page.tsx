@@ -33,7 +33,7 @@ export default function Page({
           <div className="flex h-full w-full">
             <div className="flex h-full w-full flex-col lg:w-[40%]">
               <PageTitle
-                extraWrapperClass="uppercase mb-12"
+                extraWrapperClass="uppercase mb-[80px]"
                 text="Portfolio"
                 absolute="false"
               />
