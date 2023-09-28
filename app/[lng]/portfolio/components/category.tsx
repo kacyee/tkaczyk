@@ -36,13 +36,13 @@ export const Category = ({
   return (
     <main className="relative z-[11] h-[calc(100dvh)] bg-white pt-[90px] lg:ml-[142px] lg:mr-[157px] lg:bg-transparent  lg:pt-0 xl:ml-[196px] xl:mr-[162px] xxl:mr-[166px] 2xl:mr-[232px]">
       <div className="flex h-full w-full flex-col lg:flex-row">
-        <div className="flex h-full flex-col lg:w-[40%] lg:justify-center">
+        <div className="flex h-full flex-col lg:w-[40%] ">
           <PageTitle
-            extraWrapperClass="uppercase mb-4 lg:mb-0"
+            extraWrapperClass="uppercase mb-12"
             text={activeCategory.name[lang]}
             absolute="false"
           />
-          <div className="lg:pt-40 xxl:pt-0">
+          <div className="">
             <div className="scrollbar-hide ml-8 mb-2 flex overflow-y-auto lg:ml-0 lg:mb-0 lg:block">
               {activeCategory.cases
                 ? activeCategory.cases.map((item, index) => (
@@ -114,7 +114,7 @@ export const Category = ({
           className="lg:shrink-1 style-4 relative mt-4 flex h-full shrink-0 overflow-y-auto lg:mt-0 lg:w-[60%]"
         >
           {activeCase ? (
-            <picture>
+            <picture className="w-full">
               <source
                 srcSet={activeCase.url.mobile[lang]}
                 media="(max-width:1024px)"
@@ -131,7 +131,7 @@ export const Category = ({
                 ref={imageRef}
                 width={activeWidth}
                 height={activeHeight}
-                style={{ width: "auto" }}
+                style={{ width: "100%" }}
                 quality={100}
                 placeholder="blur"
                 blurDataURL="/images/loading1.gif"

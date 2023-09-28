@@ -55,7 +55,7 @@ export default function Contact({
               animate={{ translateX: 0, opacity: 1 }}
               transition={{ ease: "easeInOut", duration: 0.4, delay: 0.7 }}
             >
-              <h2 className=" text-center text-[64px] font-bold text-black lg:text-left xl:mt-[175px] xl:mb-[70px] 2xl:mt-[394px]">
+              <h2 className=" text-center text-[64px] font-bold text-black lg:mt-[150px] lg:text-left xl:mb-[70px] 2xl:mt-[237px]">
                 {t("title")}
               </h2>
             </motion.div>
@@ -106,7 +106,7 @@ export default function Contact({
               transition={{ ease: "easeInOut", duration: 0.4, delay: 0.7 }}
               className="px-4 lg:px-0"
             >
-              <h2 className="mx-auto mt-[40px] mb-[20px] w-max text-center text-[64px] font-bold leading-none text-white lg:mx-0 lg:mb-0 lg:text-left xl:mt-[175px] xl:mb-[70px] 2xl:mt-[394px]">
+              <h2 className="mx-auto mt-[40px] mb-[20px] w-max text-center text-[64px] font-bold leading-none text-white lg:mx-0 lg:mb-0 lg:mt-[150px] lg:text-left xl:mb-[70px] 2xl:mt-[237px] ">
                 {t("send")}
                 <span className="mt-1 block text-center text-[26px] lg:text-right">
                   {t("question")}

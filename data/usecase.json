@@ -6,33 +6,14 @@
       "image": "/images/ux-background.png",
       "cases": [
         {
-          "name": { "en": "MONEVIA", "pl": "MONEVIA" },
-          "url": {
-            "mobile": {
-              "en": "/images/usecases/MoneviaCS_1440.png",
-              "pl": "/images/usecases/MoneviaCS_1440.png"
-            },
-            "desktop": {
-              "en": "/images/usecases/MoneviaCS_1440.png",
-              "pl": "/images/usecases/MoneviaCS_1440.png"
-            },
-            "fullhd": {
-              "en": "/images/usecases/MoneviaCS_1440.png",
-              "pl": "/images/usecases/MoneviaCS_1440.png"
-            }
-          },
-          "hoverBgColor": "#ED1A3B",
-          "hoverFontColor": "#FFF"
-        },
-        {
           "name": {
             "pl": "D-COIN",
             "en": "D-COIN"
           },
           "url": {
             "mobile": {
-              "en": "/images/usecases/dcoin_build.png",
-              "pl": "/images/usecases/dcoin_build.png"
+              "en": "/images/usecases/dcoin_mobile.png",
+              "pl": "/images/usecases/dcoin_mobile.png"
             },
             "desktop": {
               "en": "/images/usecases/dcoin_build.png",
@@ -47,45 +28,65 @@
           "hoverFontColor": "#FFF"
         },
         {
+          "name": { "en": "BloodHub", "pl": "BloodHub" },
+          "url": {
+            "mobile": {
+              "en": "/images/usecases/bloodhub_mobile.png",
+              "pl": "/images/usecases/bloodhub_mobile.png"
+            },
+            "desktop": {
+              "en": "/images/usecases/BloodHub.png",
+              "pl": "/images/usecases/BloodHub.png"
+            },
+            "fullhd": {
+              "en": "/images/usecases/BloodHub_4k.png",
+              "pl": "/images/usecases/BloodHub_4k.png"
+            }
+          },
+          "hoverBgColor": "#16C784",
+          "hoverFontColor": "#FFF"
+        },
+        {
+          "name": { "en": "MONEVIA", "pl": "MONEVIA" },
+          "url": {
+            "mobile": {
+              "en": "/images/usecases/monevia_mobile.png",
+              "pl": "/images/usecases/monevia_mobile.png"
+            },
+            "desktop": {
+              "en": "/images/usecases/MoneviaCS_1440_2x.png",
+              "pl": "/images/usecases/MoneviaCS_1440_2x.png"
+            },
+            "fullhd": {
+              "en": "/images/usecases/Monevia_4k.png",
+              "pl": "/images/usecases/Monevia_4k.png"
+            }
+          },
+          "hoverBgColor": "#ED1A3B",
+          "hoverFontColor": "#FFF"
+        },
+
+        {
           "name": {
             "pl": "mObywatel",
             "en": "mObywatel"
           },
           "url": {
             "mobile": {
-              "en": "/images/usecases/mobywatel.png",
-              "pl": "/images/usecases/mobywatel.png"
+              "en": "/images/usecases/mObywatel_mobile.png",
+              "pl": "/images/usecases/mObywatel_mobile.png"
             },
             "desktop": {
-              "en": "/images/usecases/mobywatel.png",
-              "pl": "/images/usecases/mobywatel.png"
+              "en": "/images/usecases/mObywatel_2_0.png",
+              "pl": "/images/usecases/mObywatel_2_0.png"
             },
             "fullhd": {
-              "en": "/images/usecases/mobywatel.png",
-              "pl": "/images/usecases/mobywatel.png"
+              "en": "/images/usecases/mObywatel_2_4k.png",
+              "pl": "/images/usecases/mObywatel_2_4k.png"
             }
           },
           "hoverBgColor": "#DDEBF9",
           "hoverFontColor": "#000"
-        },
-        {
-          "name": { "en": "BloodHub", "pl": "BloodHub" },
-          "url": {
-            "mobile": {
-              "en": "/images/usecases/BloodHub.png",
-              "pl": "/images/usecases/BloodHub.png"
-            },
-            "desktop": {
-              "en": "/images/usecases/BloodHub.png",
-              "pl": "/images/usecases/BloodHub.png"
-            },
-            "fullhd": {
-              "en": "/images/usecases/BloodHub.png",
-              "pl": "/images/usecases/BloodHub.png"
-            }
-          },
-          "hoverBgColor": "#16C784",
-          "hoverFontColor": "#FFF"
         }
       ]
     },
@@ -98,8 +99,8 @@
           "name": { "en": "UNAWEZA FOUNDATION", "pl": "FUNDACJA UNAWEZA" },
           "url": {
             "mobile": {
-              "en": "/images/usecases/UNAWEZA_EN.png",
-              "pl": "/images/usecases/UNAWEZA.png"
+              "en": "/images/usecases/UNAWEZA_mobile.png",
+              "pl": "/images/usecases/UNAWEZA_mobile.png"
             },
             "desktop": {
               "en": "/images/usecases/UNAWEZA_EN.png",
@@ -107,7 +108,7 @@
             },
             "fullhd": {
               "en": "/images/usecases/UNAWEZA_4k_EN.png",
-              "pl": "/images/usecases/UNAWEZA.png"
+              "pl": "/images/usecases/UNAWEZA_4k_EN.png"
             }
           },
           "hoverBgColor": "#EFEFEF",

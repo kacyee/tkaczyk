@@ -2,6 +2,6 @@
   "title": "Services",
   "services_web": "<li>Web app</li><li>Website</li><li>Landing page</li>",
   "services_mobile": "<li>App for ANDROID</li><li>App for iOS</li><li>Hybrid App</li>",
-  "services_others": " <li>Brand design</li><li>E-commerce</li><li>Posters</li><li>DTP</li>",
-  "others": "Others"
+  "services_others": " <li>Design process</li><li>Designing in FIGMA</li><li>Consulting</li>",
+  "others": "Coaching"
 }

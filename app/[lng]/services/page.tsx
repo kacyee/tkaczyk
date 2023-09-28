@@ -5,7 +5,7 @@ import PageTitle from "@/components/PageTitle";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide-core.min.css";
 import classNames from "classnames";
-import { animate, AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -73,7 +73,7 @@ export default function Services({
         ) : null}
       </AnimatePresence>
       <MobileMenu isBlackMenu={true} lang={lng} />
-      <main className="relative z-[11] min-h-[calc(100dvh)] bg-yellow pt-[90px] lg:ml-[200px]  lg:h-[calc(100dvh)] lg:overflow-hidden lg:bg-transparent lg:pt-0 xl:ml-[276px] xl:mr-[162px] 2xl:mr-[232px] 2xl:ml-[400px]">
+      <main className="relative z-[11] min-h-[calc(100dvh)] bg-yellow pt-[90px] lg:ml-[200px]  lg:mr-[6rem] lg:h-[calc(100dvh)] lg:overflow-hidden lg:bg-transparent lg:pt-0 xl:ml-[276px] xl:mr-[162px] 2xl:mr-[232px] 2xl:ml-[400px]">
         <div className="flex h-full w-full flex-col justify-between lg:flex-row">
           <div className="flex h-full flex-col lg:w-[40%]">
             <motion.div
@@ -99,17 +99,17 @@ export default function Services({
               >
                 <SplideTrack>
                   <SplideSlide>
-                    <p className="-ml-2 font-bold leading-none lg:text-[300px] 2xl:text-[360px]">
+                    <p className="-ml-2 font-bold leading-none lg:text-[250px] xl:text-[300px]  2xl:text-[360px]">
                       01
                     </p>
                   </SplideSlide>
                   <SplideSlide>
-                    <p className="-ml-2 font-bold leading-none lg:text-[300px] 2xl:text-[360px]">
+                    <p className="-ml-2 font-bold leading-none lg:text-[250px] xl:text-[300px]  2xl:text-[360px]">
                       02
                     </p>
                   </SplideSlide>
                   <SplideSlide>
-                    <p className="-ml-2 font-bold leading-none lg:text-[300px] 2xl:text-[360px]">
+                    <p className="-ml-2 font-bold leading-none lg:text-[250px] xl:text-[300px]  2xl:text-[360px]">
                       03
                     </p>
                   </SplideSlide>
@@ -146,7 +146,7 @@ export default function Services({
               </Splide>
             </motion.div>
           </div>
-          <div className="flex h-full flex-col lg:mt-[172px]  lg:w-[40%] 2xl:mt-[237px]">
+          <div className="flex h-full flex-col lg:mt-[150px] lg:w-[40%] 2xl:mt-[237px]">
             <motion.div
               initial={{ translateX: -40, opacity: 0 }}
               animate={{ translateX: 0, opacity: 1 }}
