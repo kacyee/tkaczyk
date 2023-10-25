@@ -2,10 +2,11 @@
   "name": "tkaczyk",
   "version": "0.1.0",
   "private": true,
+  "main": "app.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "SET NODE_ENV=production && node app.js",
+    "start": "NODE_ENV=production && node app.js",
     "lint": "next lint"
   },
   "dependencies": {

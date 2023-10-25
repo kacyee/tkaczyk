@@ -25,7 +25,7 @@ i18next
   // .use(LocizeBackend) // locize backend could be used on client side, but prefer to keep it in sync with server side
   .init({
     ...getOptions(),
-    lng: undefined, // let detect the language on client side
+    lng: "pl", // let detect the language on client side
     detection: {
       order: ["path", "htmlTag", "cookie", "navigator"],
     },

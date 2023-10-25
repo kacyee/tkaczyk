@@ -103,7 +103,7 @@
               "pl": "/images/usecases/UNAWEZA_mobile.png"
             },
             "desktop": {
-              "en": "/images/usecases/UNAWEZA_EN.png",
+              "en": "/images/usecases/UNAWEZA.png",
               "pl": "/images/usecases/UNAWEZA.png"
             },
             "fullhd": {
@@ -111,7 +111,7 @@
               "pl": "/images/usecases/UNAWEZA_4k_EN.png"
             }
           },
-          "hoverBgColor": "#EFEFEF",
+          "hoverBgColor": "#F26A21",
           "hoverFontColor": "#0B0B0B"
         }
       ]

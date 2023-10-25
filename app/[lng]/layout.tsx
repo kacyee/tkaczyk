@@ -1,4 +1,3 @@
-import MobileMenu from "@/components/MobileMenu";
 import Menu from "../../components/Menu";
 import { AppContextProvider } from "../context/AppContext";
 import "./globals.css";
@@ -8,6 +7,13 @@ import { languages } from "../i18n/settings";
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Paweł Tkaczyk - portfolio",
+  description: "Paweł Tkaczyk - portfolio",
+};
 
 export default function RootLayout({
   children,
