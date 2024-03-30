@@ -66,10 +66,10 @@ export default function Contact({
               className="mt-[30px] text-center text-lg lg:mt-0 lg:text-left"
             >
               <a
-                href="mailto:paweltkaczyk.design@gmail.com"
+                href="mailto:PAWELTKACZYK.GRAPHIC@GMAIL.COM"
                 className=" font-medium transition duration-300 hover:text-white"
               >
-                paweltkaczyk.design@gmail.com
+                PAWELTKACZYK.GRAPHIC@GMAIL.COM
               </a>
             </motion.nav>
             <motion.nav
@@ -93,9 +93,9 @@ export default function Contact({
             >
               <a
                 className="mt-[30px] text-lg font-medium transition duration-300 hover:text-white"
-                href="https://dribble.com"
+                href="https://pl.linkedin.com/in/paweł-tkaczyk-designn"
               >
-                Dribble
+                LinkedIn
               </a>
             </motion.nav>
           </motion.div>
